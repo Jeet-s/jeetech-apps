@@ -1,0 +1,9 @@
+{
+  "title": "BlockDay — Simple Time Blocking",
+  "package": "com.jeetech.a003",
+  "coreFeature": "create a time block on the day timeline with a drag gesture and start it with one tap",
+  "screens": ["Onboarding", "Today", "Stats", "Settings", "Pro"],
+  "monetization": { "proUnlockIap": true, "removeAdsIap": true, "banner": true, "interstitials": false },
+  "analyticsEvents": ["app_open", "onboarding_done", "core_action", "screen_view", "paywall_view", "iap_purchase"],
+  "_note": "Filled by the Claude Code builder from the PRD + asset manifest. The factory checks this file exists to recognise a workspace."
+}

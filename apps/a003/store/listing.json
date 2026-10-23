@@ -1,0 +1,36 @@
+{
+  "aso": {
+    "primary": "time blocking",
+    "problems": [],
+    "secondary": [
+      "time block planner",
+      "daily time blocks"
+    ]
+  },
+  "title": "BlockDay - Time Blocking",
+  "category": "Productivity",
+  "keywords": [
+    "time blocking",
+    "time block planner",
+    "daily time blocks",
+    "time blocking app",
+    "time block schedule",
+    "time block calendar",
+    "time block app",
+    "daily planner",
+    "routine planner",
+    "focus planner"
+  ],
+  "release_notes": "What’s new\n- Launch to an editable 24h timeline with minute-precision drag create/resize/move\n- Color-coded activities and tags with accessible presets and custom hues\n- Reliable local reminders with snooze, skip, pre-end nudges, and a persistent Active Block banner\n- Templates/routines with weekday selectors; stackable without overwriting\n- Fast editing: duplicate, multi-select move, rubber-band shift, gap-fill drag\n- Undo/redo with activity log and confirmations for clears/deletes\n- Insights: time by color/tag, planned vs completed, streaks\n- Export day/week to PNG and CSV; manual local backup/restore\n- Optional calendar integration and optional cloud sync\n- Optional AI Plan Helper with daily quota\n- Dark mode, large text, high-contrast themes, VoiceOver/TalkBack labels\n- Performance and reliability improvements for notifications and overnight blocks",
+  "content_rating": "Everyone",
+  "full_description": "Time blocking made instant with BlockDay: drag to plan your day in seconds, stay on track with clear alerts, and keep your data on your device by default. It’s a focused time block planner built for people who want a tactile daily flow without sign-ups or clutter.\n\nWhy BlockDay\n- Plan within 60 seconds of first launch—no account required\n- Works offline; your schedule, templates, and stats live on your device\n- Reliable reminders with snooze/skip and an always-visible Active Block banner\n- Fast edits for real life: resize, move, duplicate, rubber-band shift, and gap-fill\n- Privacy-first design with optional encrypted cloud sync you control\n\nCore workflow\n- Drag on a vertical 24h timeline to create blocks with minute precision (snap to 5/10/15)\n- Stretch to resize, drag to move; supports overnight blocks\n- Color-code activities and add tags for visual clarity and insights\n- Tap Start/Done on blocks; see a now/next banner with time left\n\nKey features\n• Day Timeline: natural, tactile editing; live snapping, ghost preview, overlap handling\n• Color-coded Activities & Tags: accessible presets + custom hues; multiple tags per block\n• Reminders & Alarms: on-time local notifications, pre-alert nudges, snooze 5/10/15/30, skip, persistent banner\n• Templates/Routines: save block sets (durations, colors, tags, nudges), weekday/weekend selectors, stack without overwriting\n• Fast Editing Tools: duplicate, multi-select move, rubber-band shift, gap-fill drag, default durations, context menu\n• Undo/Redo & Log: unlimited per session; confirmations for destructive actions; exportable activity log\n• Statistics/Insights: time by color/tag, planned vs completed, streaks, daily/weekly summaries\n• Export/Share: day/week to PNG and CSV; manual local backup/restore file\n• ADHD-friendly Cues: active banner, pre-transition ramp, optional full-screen alert\n• Themes & Dark Mode: system-following with high contrast and large text option\n• Optional Calendar Integration: connect selected device calendars with conflict choices (keep, shift, skip)\n• Optional AI Plan Helper: paste a task list to draft a day plan; review and insert selected blocks\n\nWhat’s free\n- Core time blocking: create, move, resize, duplicate, multi-select\n- Templates and routines (create/apply/stack)\n- Reminders, pre-end nudges, Active Block banner, optional full-screen alert\n- Insights basics: distribution by color/tag, planned vs done, streaks\n- Manual backup/restore, PNG/CSV export\n- Dark mode, large text, undo/redo\n- Optional minimal ads (never during an active block)\n\nWhat Pro adds (one-time or subscription options)\n- Advanced analytics: trends over 7/30/90 days, overrun rates, weekday patterns; export insights CSV\n- Customizable widgets and theme packs\n- Higher quota for AI Plan Helper\n- Optional cross-device cloud sync and two-way calendar integration (monthly/annual with trial; cancel anytime)\n\nPrivacy & control\n- Offline-first: data stored on your device by default\n- Optional login only for cloud sync (email code; no passwords)\n- Minimal, toggleable analytics; no trackers in Pro\n- Exports available; backups stay where you save them\n\nAccessibility\n- Large touch targets, Dynamic Type, high-contrast themes\n- VoiceOver/TalkBack labels for timeline and actions\n\nBuilt for focus, speed, and trust. If you want a time blocking app that respects your flow and your privacy, try BlockDay today.",
+  "screenshots_plan": [
+    "Plan your day in seconds",
+    "Drag, resize, and move fast",
+    "Now/Next banner for focus",
+    "Apply routines in one tap",
+    "Shift the rest of your day",
+    "See time by color and tag"
+  ],
+  "short_description": "Fast time blocking with a simple time block planner. Offline, no account."
+}

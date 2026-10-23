@@ -1,0 +1,105 @@
+{
+  "style": "Premium flat–semi-flat vector with soft ambient lighting, crisp 1–2 px strokes, and gentle depth via layered shadows and subtle inner glow; rounded rectangles, chamfered edges, and pill chips feel tactile without skeuomorphism; colors are vivid but calm with careful contrast and spacious negative areas; elements align on a strict vertical rhythm mirroring a day timeline; motion implied with trails and staggered stacking; no characters, only geometric forms and iconography; overall mood is focused, optimistic, and adult-friendly, matching a clean productivity UI and accessible at small sizes.",
+  "palette": [
+    "#0F62FE",
+    "#0FB5A9",
+    "#FF6B6B",
+    "#FFB020",
+    "#7C5CFF",
+    "#F7F8FA"
+  ],
+  "ui_palette": {
+    "primary": "#0F62FE",
+    "primaryDark": "#0B47B3",
+    "primarySoft": "#E6EFFF",
+    "accent": "#7C5CFF",
+    "success": "#0FB5A9",
+    "warning": "#FFB020",
+    "bg": "#F7F8FA",
+    "surface": "#FFFFFF",
+    "ink": "#0F1A2B",
+    "inkSoft": "#5B677A"
+  },
+  "assets": [
+    {
+      "id": "app_icon",
+      "kind": "ui",
+      "file": "app_icon.png",
+      "usage": "App icon for stores and devices; export platform sizes from master.",
+      "width": 502,
+      "height": 512
+    },
+    {
+      "id": "logo_mark",
+      "kind": "ui",
+      "file": "logo_mark.png",
+      "usage": "In-app logo for splash and Settings header.",
+      "width": 389,
+      "height": 512
+    },
+    {
+      "id": "onboarding_1_drag_create",
+      "kind": "illustration",
+      "file": "onboarding_1_drag_create.png",
+      "usage": "Onboarding Screen 1 hero image.",
+      "width": 325,
+      "height": 512
+    },
+    {
+      "id": "onboarding_2_choose_defaults",
+      "kind": "illustration",
+      "file": "onboarding_2_choose_defaults.png",
+      "usage": "Onboarding Screen 2 hero image.",
+      "width": 372,
+      "height": 512
+    },
+    {
+      "id": "onboarding_3_notifications",
+      "kind": "illustration",
+      "file": "onboarding_3_notifications.png",
+      "usage": "Onboarding Screen 3 hero image.",
+      "width": 334,
+      "height": 512
+    },
+    {
+      "id": "empty_day_timeline",
+      "kind": "empty_state",
+      "file": "empty_day_timeline.png",
+      "usage": "Empty state for Day Timeline when no blocks are planned.",
+      "width": 211,
+      "height": 512
+    },
+    {
+      "id": "empty_templates",
+      "kind": "empty_state",
+      "file": "empty_templates.png",
+      "usage": "Empty state for Templates/Routines list.",
+      "width": 482,
+      "height": 512
+    },
+    {
+      "id": "empty_stats",
+      "kind": "empty_state",
+      "file": "empty_stats.png",
+      "usage": "Empty state for Statistics/Insights.",
+      "width": 497,
+      "height": 512
+    },
+    {
+      "id": "pro_hero",
+      "kind": "hero",
+      "file": "pro_hero.png",
+      "usage": "Hero image for the Pro upgrade sheet.",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "id": "achievement_streak_badge",
+      "kind": "ui",
+      "file": "achievement_streak_badge.png",
+      "usage": "Small badge for streaks and milestones.",
+      "width": 416,
+      "height": 512
+    }
+  ]
+}

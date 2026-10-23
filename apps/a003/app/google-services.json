@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "304027183289",
+    "project_id": "jeetech-game-factory",
+    "storage_bucket": "jeetech-game-factory.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304027183289:android:e54908f341b2796adbd368",
+        "android_client_info": {
+          "package_name": "com.jeetech.a001"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBPuqP28GFcM-LtGl5g3yjHl0DNc0y6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304027183289:android:683a3047c8d34103dbd368",
+        "android_client_info": {
+          "package_name": "com.jeetech.a002"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBPuqP28GFcM-LtGl5g3yjHl0DNc0y6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304027183289:android:84536d1800d333d4dbd368",
+        "android_client_info": {
+          "package_name": "com.jeetech.a003"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBPuqP28GFcM-LtGl5g3yjHl0DNc0y6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304027183289:android:a32cf4154049dae2dbd368",
+        "android_client_info": {
+          "package_name": "com.jeetech.g002"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBPuqP28GFcM-LtGl5g3yjHl0DNc0y6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

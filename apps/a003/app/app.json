@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "BlockDay - Time Blocking",
+    "slug": "blockday-simple-time-blocking",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "android": {
+      "package": "com.jeetech.a003",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS"
+      ],
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW"
+      ],
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/store/adaptive-foreground.png",
+        "backgroundColor": "#818a93"
+      }
+    },
+    "scheme": "blockday-simple-time-blocking",
+    "userInterfaceStyle": "light",
+    "icon": "./assets/store/icon.png"
+  }
+}
