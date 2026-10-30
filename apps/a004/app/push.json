@@ -1,0 +1,5 @@
+{
+  "_note": "Factory-owned. registerUrl is set per build when push is configured for this app (Firebase + App Cloud); empty = local notifications only.",
+  "app": "com.jeetech.a004",
+  "registerUrl": "https://app-cloud-api-production.up.railway.app/api/cloud/push/register"
+}

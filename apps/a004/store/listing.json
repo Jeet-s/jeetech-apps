@@ -1,0 +1,37 @@
+{
+  "aso": {
+    "primary": "diabetic meal planner",
+    "problems": [
+      "full_description uses the primary keyword \"diabetic meal planner\" only 2× (aim for 3–5, naturally)"
+    ],
+    "secondary": [
+      "type 2 diabetes diet",
+      "diabetes blood sugar tracking",
+      "diabetes food scanner",
+      "blood sugar diary"
+    ]
+  },
+  "title": "Diabetic Meal Planner",
+  "category": "Health & Fitness",
+  "keywords": [
+    "diabetic meal planner",
+    "type 2 diabetes diet",
+    "diabetes blood sugar tracking",
+    "diabetes food scanner",
+    "blood sugar diary",
+    "diabetic carb counter",
+    "diabetic food tracker",
+    "diabetic log book"
+  ],
+  "release_notes": "First release of Sugar Plate. Snap a meal for estimated carbs and a swap idea, log blood sugar with a big keypad, view charts, time in range and an estimated A1C, set reminders, export CSV or PDF, and back up locally. Wellness tool only, not medical advice.",
+  "content_rating": "Everyone",
+  "full_description": "Sugar Plate is a diabetic meal planner and glucose diary that helps you see what your own plate does. Snap a photo of your meal, get an estimated carb count and glycemic band with a practical swap, then log your blood sugar in seconds. It is built for everyday dishes like dal, roti, rice, injera, ugali, arepas and tortillas.\n\nWellness tool only. Not a medical device. It gives no diagnosis and no dosing advice. Always follow your care plan and talk to your doctor.\n\nFOOD FIRST: YOUR DIABETIC MEAL PLANNER\n• Diabetes food scanner: photo meal analysis with estimated carbs, glycemic band and a local swap (AI, needs internet; photos are sent to our server for analysis only)\n• Built-in database of regional dishes with carb ranges, searchable without limits\n• Same meal as yesterday in one tap\n• Diabetic carb counter and food tracker with editable portions\n• Link a before-meal and after-meal reading to see the change for each meal\n\nDIABETES BLOOD SUGAR TRACKING IN 5 SECONDS\n• Big keypad, decimals, mg/dL or mmol/L toggle\n• Meal context picked automatically by time of day; backdate any entry\n• Color plus icon and label for in-range, high and low\n• Notes, medication and insulin entries (logging only, no dose advice)\n• Import readings from meters that support the standard Bluetooth Glucose Profile\n\nLEARN WHAT WORKS FOR YOU\n• Charts by day, week and month\n• Averages for fasting, pre-meal and post-meal, plus time in range\n• Estimated A1C with the formula shown and the number of readings behind it. It is an estimate, not a diagnosis\n• Your best and worst meals ranked \"in your log\", plus comparisons such as rice vs roti dinners\n• Weekly summary with a question to bring to your doctor\n\nA BLOOD SUGAR DIARY THAT RESPECTS YOU\n• No account needed. Signing in with an email code is optional and only for cloud backup\n• Your data stays on your device by default\n• Logging, charts, history, search, reminders, dish search, local backup and restore all work offline. Meal photo analysis needs internet\n• Automatic daily local snapshots, plus a check of entry counts before app updates\n• Optional PIN lock, dark and high-contrast themes, large text and TalkBack support\n• Delete all your data any time\n\nFREE\n• Unlimited glucose, meal and medication logging\n• Charts, time in range, A1C estimate, history and search\n• Unlimited reminders for checks, meals and medication\n• CSV and standard PDF export for your doctor\n• Bluetooth meter import and local backup\n• Ranked meal insights and a few AI photo analyses each day\n• Contains ads with consent first. Ads are never personalised on health data\n\nPRO\n• Remove ads\n• Cloud backup and multi-device sync\n• Unlimited AI meal coaching and AI chat\n• Advanced clinician PDF reports and AI weekly summary\n• Annual plan with a free trial, or a lifetime option. Prices and trial terms are shown before you buy. Cancel any time in your store subscription settings, and restore purchases whenever you need.\nNo free feature is ever moved behind Pro.\n\nAI estimates can be wrong. Check labels and portions, and never change medication based on this app.\n\nDownload Sugar Plate to plan meals, track your sugar and bring clear reports to your next appointment.",
+  "screenshots_plan": [
+    "Snap your plate, see carbs",
+    "Log blood sugar in seconds",
+    "Rice vs roti, in your log",
+    "Doctor report in one tap",
+    "Dark mode with large text"
+  ],
+  "short_description": "Diabetic meal planner with food scanner, carb counter and blood sugar diary"
+}

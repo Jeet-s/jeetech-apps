@@ -1,0 +1,10 @@
+{
+  "title": "Sugar Plate — Diabetes Meal Coach",
+  "package": "com.jeetech.a004",
+  "coreFeature": "Photo of your meal → carb and glycemic estimate with a plate-by-plate swap suggestion for Indian, African or Latin dishes, linked to your glucose log",
+  "screens": ["Onboarding", "Today", "Stats", "Settings", "Pro"],
+  "bluetooth": true,
+  "monetization": { "proUnlockIap": true, "removeAdsIap": false, "banner": false, "interstitials": false },
+  "analyticsEvents": ["app_open", "onboarding_done", "core_action", "screen_view", "paywall_view", "iap_purchase"],
+  "_note": "Filled by the Claude Code builder from the PRD + asset manifest. The factory checks this file exists to recognise a workspace."
+}

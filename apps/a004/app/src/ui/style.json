@@ -1,0 +1,96 @@
+{
+  "family": "ledger",
+  "label": "Ledger — trustworthy & precise",
+  "scheme": "light",
+  "language": "Bank-grade trust: restrained navy/teal, hairline borders instead of shadows, compact rows, tabular figures everywhere, numbers are the hero (large, right-aligned in lists), green/red ONLY for money in/out. No playful illustrations on data screens, no emoji, no bouncy motion. Charts are clean bars/lines with gridlines.",
+  "fonts": {
+    "display": "IBMPlexSans_600SemiBold",
+    "displayBold": "IBMPlexSans_700Bold",
+    "regular": "IBMPlexSans_400Regular",
+    "medium": "IBMPlexSans_500Medium",
+    "semibold": "IBMPlexSans_600SemiBold",
+    "bold": "IBMPlexSans_700Bold"
+  },
+  "radius": {
+    "sm": 6,
+    "md": 8,
+    "lg": 12,
+    "xl": 16,
+    "pill": 999
+  },
+  "space": {
+    "xs": 4,
+    "sm": 7,
+    "md": 11,
+    "lg": 14,
+    "xl": 22,
+    "xxl": 29
+  },
+  "elevation": "flat",
+  "motion": "calm",
+  "hero": "solid",
+  "headingCase": "none",
+  "headingTracking": -0.2,
+  "light": {
+    "primary": "#0F766E",
+    "primaryDark": "#0B5953",
+    "primarySoft": "#E2EFEE",
+    "accent": "#F59E0B",
+    "success": "#16A34A",
+    "successSoft": "#DCFCE7",
+    "warning": "#F59E0B",
+    "warningSoft": "#FEF3C7",
+    "danger": "#DC2626",
+    "dangerSoft": "#FEE2E2",
+    "bg": "#FAFBFB",
+    "surface": "#FFFFFF",
+    "surfaceAlt": "#F1F6F5",
+    "border": "#E3E4E6",
+    "ink": "#0F172A",
+    "inkSoft": "#475569",
+    "inkMuted": "#64748B",
+    "onPrimary": "#FFFFFF",
+    "scrim": "rgba(15,23,42,0.45)"
+  },
+  "dark": {
+    "primary": "#63A6A1",
+    "primaryDark": "#457471",
+    "primarySoft": "#1E2D31",
+    "accent": "#F59E0B",
+    "success": "#4ADE80",
+    "successSoft": "#183329",
+    "warning": "#FBBF24",
+    "warningSoft": "#352F1B",
+    "danger": "#F87171",
+    "dangerSoft": "#342227",
+    "bg": "#0F1319",
+    "surface": "#1B1F25",
+    "surfaceAlt": "#25282E",
+    "border": "#313439",
+    "ink": "#F1F5F9",
+    "inkSoft": "#CBD5E1",
+    "inkMuted": "#94A3B8",
+    "onPrimary": "#0B0F14",
+    "scrim": "rgba(0,0,0,0.6)"
+  },
+  "gradient": {
+    "light": [
+      "#2C867F",
+      "#387D5C"
+    ],
+    "dark": [
+      "#599591",
+      "#88A47C"
+    ]
+  },
+  "categorical": [
+    "#0F766E",
+    "#F59E0B",
+    "#0F4C81",
+    "#0E9F6E",
+    "#D97706",
+    "#7C3AED",
+    "#0891B2",
+    "#BE123C"
+  ]
+}

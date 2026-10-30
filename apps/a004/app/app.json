@@ -1,0 +1,78 @@
+{
+  "expo": {
+    "name": "Sugar Plate",
+    "slug": "sugar-plate-diabetes-meal-coach",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "android": {
+      "package": "com.jeetech.a004",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.CAMERA"
+      ],
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.READ_APP_BADGE",
+        "android.permission.WAKE_LOCK",
+        "android.permission.FOREGROUND_SERVICE"
+      ],
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/store/adaptive-foreground.png",
+        "backgroundColor": "#fef5df"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.jeetech.a004",
+      "supportsTablet": false,
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "NSCameraUsageDescription": "Sugar Plate uses the camera so you can snap a photo of your plate for a carb and glycemic estimate.",
+        "NSPhotoLibraryUsageDescription": "Sugar Plate lets you choose a meal photo from your library for a carb and glycemic estimate.",
+        "NSBluetoothAlwaysUsageDescription": "Sugar Plate connects to your Bluetooth glucose meter so you can import readings without typing them in.",
+        "NSBluetoothPeripheralUsageDescription": "Sugar Plate connects to your Bluetooth glucose meter so you can import readings without typing them in."
+      }
+    },
+    "scheme": "sugar-plate-diabetes-meal-coach",
+    "userInterfaceStyle": "automatic",
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "color": "#4F46E5"
+        }
+      ],
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": false,
+          "modes": [],
+          "neverForLocation": true
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "enableBackgroundPlayback": false,
+          "enableBackgroundRecording": false
+        }
+      ]
+    ],
+    "backgroundColor": "#FAFBFB",
+    "splash": {
+      "backgroundColor": "#FAFBFB"
+    },
+    "icon": "./assets/store/icon.png"
+  }
+}

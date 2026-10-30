@@ -1,0 +1,105 @@
+{
+  "style": "Warm, calm, modern flat-vector illustration with a touch of paper-cut softness. Shapes are geometric and rounded, with generous corner radii and no hard outlines; edges are crisp but friendly, with a faint 1px tonal edge only where needed for separation. Shading is minimal: flat fills plus one soft secondary tone per object and a gentle, low-opacity contact shadow beneath plates and bowls, lit as if by diffuse morning window light from the upper left. Surfaces feel like matte ceramic, woven cloth, and fresh food with tiny highlight dots, never glossy or photoreal. Compositions are mostly top-down or straight-on, uncluttered, with plenty of breathing room and off-white (#FAF7F2) grounds, deep green as the anchor, and saffron as the single warm accent. Food is appetizing and culturally respectful (dal, roti, rice, injera, ugali, arepas, tortillas, beans, greens), with no people, no needles, no blood, no medical crosses, no text. Mood is reassuring, capable, and quietly optimistic, like a kind home cook rather than a clinic. Everything reads clearly at small sizes on low-end Android screens, with limited colour counts and no heavy gradients, so the art stays light as SVG and works in light, dark, and high-contrast themes.",
+  "palette": [
+    "#1F6F5C",
+    "#F4A261",
+    "#FAF7F2",
+    "#2B3A36",
+    "#E76F51",
+    "#A8D5BA"
+  ],
+  "ui_palette": {
+    "primary": "#1F6F5C",
+    "primaryDark": "#14513F",
+    "primarySoft": "#DCEFE6",
+    "accent": "#F4A261",
+    "success": "#2E7D4F",
+    "warning": "#B8541F",
+    "bg": "#FAF7F2",
+    "surface": "#FFFFFF",
+    "ink": "#1F2A27",
+    "inkSoft": "#55635E"
+  },
+  "assets": [
+    {
+      "id": "ill_onboard_snap_plate",
+      "kind": "illustration",
+      "file": "ill_onboard_snap_plate.png",
+      "usage": "Onboarding screen 1: snap your plate. Also the first meal capture explainer.",
+      "width": 512,
+      "height": 494
+    },
+    {
+      "id": "ill_onboard_cuisine",
+      "kind": "illustration",
+      "file": "ill_onboard_cuisine.png",
+      "usage": "Onboarding screen 2: choose your cuisine. Header of the region selection sheet.",
+      "width": 512,
+      "height": 166
+    },
+    {
+      "id": "ill_onboard_insight",
+      "kind": "illustration",
+      "file": "ill_onboard_insight.png",
+      "usage": "Onboarding screen 3: learn which meals spike you.",
+      "width": 512,
+      "height": 440
+    },
+    {
+      "id": "ill_onboard_private",
+      "kind": "illustration",
+      "file": "ill_onboard_private.png",
+      "usage": "Onboarding screen 4: your data stays on your phone, no account needed.",
+      "width": 512,
+      "height": 419
+    },
+    {
+      "id": "empty_history",
+      "kind": "empty_state",
+      "file": "empty_history.png",
+      "usage": "Empty state for the History list before any readings are logged.",
+      "width": 512,
+      "height": 390
+    },
+    {
+      "id": "empty_insights",
+      "kind": "empty_state",
+      "file": "empty_insights.png",
+      "usage": "Empty state for the Food insights screen when fewer than 3 linked meals exist.",
+      "width": 512,
+      "height": 372
+    },
+    {
+      "id": "empty_meals",
+      "kind": "empty_state",
+      "file": "empty_meals.png",
+      "usage": "Empty state for the Meals and quick-log list or the Reports list.",
+      "width": 512,
+      "height": 442
+    },
+    {
+      "id": "hero_pro_sheet",
+      "kind": "hero",
+      "file": "hero_pro_sheet.png",
+      "usage": "Header image of the Pro sheet (cloud backup, AI narrative summary). Must feel gentle and non-pushy.",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "id": "ui_logo_mark",
+      "kind": "ui",
+      "file": "ui_logo_mark.png",
+      "usage": "In-app logo mark for the home header and splash. Also the base for the app icon.",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "ui_badge_streak",
+      "kind": "ui",
+      "file": "ui_badge_streak.png",
+      "usage": "Achievement badge for logging streaks and first linked meal. Used in the progress area.",
+      "width": 512,
+      "height": 511
+    }
+  ]
+}

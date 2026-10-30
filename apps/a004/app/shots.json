@@ -1,0 +1,11 @@
+{
+  "_note": "Store screenshot scenes. Each id is opened with <scheme>://shot/<id> and captured on an emulator. Real app states with seeded data (see src/screenshots.tsx), framed with a benefit headline.",
+  "scenes": [
+    { "id": "photo", "caption": "Snap a plate, see the carbs" },
+    { "id": "insights", "caption": "Your A1C and time in range" },
+    { "id": "log", "caption": "Log glucose in five seconds" },
+    { "id": "meals", "caption": "See what each meal does" },
+    { "id": "history", "caption": "Every reading, always editable" },
+    { "id": "pro", "caption": "No account. Ad-free with Pro." }
+  ]
+}
