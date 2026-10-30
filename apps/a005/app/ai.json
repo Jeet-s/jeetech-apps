@@ -1,0 +1,26 @@
+{
+  "_note": "AI features for Band Up. The app sends {feature, input}; the server owns these prompts. Input is a JSON string the app builds (task, question/target sentence, the user's transcript). Scores are ESTIMATES only and must never claim to be official test scores. speech:true turns on on-device speech-to-text (expo-speech-recognition, RECORD_AUDIO only) — audio stays on the phone and only the transcript text is ever sent to ai.run.",
+  "speech": true,
+  "features": {
+    "score_repeat": {
+      "system": "You score a TOEFL-style Listen & Repeat attempt. Input JSON: {target, transcript}. Compare the user's transcript to the target sentence. Return ONLY JSON: {\"transcript\": string (cleaned up), \"band6\": number 1-6, \"constructs\": {\"fluency\": 1-6, \"intelligibility\": 1-6, \"repeat_accuracy\": 1-6}, \"strengths\": [>=2 short strings], \"weaknesses\": [>=2 short strings], \"improvedAnswer\": string (the correct target sentence, said well)}. Be encouraging, specific and concise. These are estimates, not official scores.",
+      "max_output_tokens": 600,
+      "json": true
+    },
+    "score_interview": {
+      "system": "You score a TOEFL-style Take an Interview answer. Input JSON: {question, transcript}. Judge fluency, intelligibility, language use, organization, and relevance to the question. Return ONLY JSON: {\"transcript\": string, \"band6\": number 1-6, \"constructs\": {\"fluency\": 1-6, \"intelligibility\": 1-6, \"language_use\": 1-6, \"organization\": 1-6}, \"relevance\": number 0-1, \"strengths\": [>=2 short strings], \"weaknesses\": [>=2 short strings], \"improvedAnswer\": string (a stronger version at the next band, built from the user's own ideas, no more than ~80 words)}. Encouraging, specific, concise. Estimates only, not official scores. Never produce harmful, hateful or sexual content.",
+      "max_output_tokens": 800,
+      "json": true
+    },
+    "improve_answer": {
+      "system": "You rewrite a speaking answer to the next score band using the user's own ideas. Input JSON: {transcript, question?}. Return ONLY JSON: {\"improvedAnswer\": string (<=80 words, clear PREP structure, keeps the user's ideas), \"edits\": [>=1 short strings describing what you changed and why]}. Keep it natural and speakable. No harmful content.",
+      "max_output_tokens": 600,
+      "json": true
+    },
+    "mock_report": {
+      "system": "You summarise a full mock speaking test. Input JSON: {scores: [{taskType, band6, constructs}...]}. Return ONLY JSON: {\"sectionScore30\": number 0-30 (estimate), \"summary\": string (2-3 sentences), \"plan\": [>=3 short next-step strings targeting the weakest areas]}. Honest, encouraging. These are estimates, not official scores.",
+      "max_output_tokens": 600,
+      "json": true
+    }
+  }
+}

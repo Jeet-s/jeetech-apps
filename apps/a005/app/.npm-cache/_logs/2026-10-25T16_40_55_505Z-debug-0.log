@@ -1,0 +1,25 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.3
+2 info using node@v22.20.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/jagjeetsingh/ai-app-factory/.workspaces/f8dc22d6-dbda-4f82-a57d-6d98905e8017/.npmrc
+5 silly config load:file:/Users/jagjeetsingh/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm view expo-speech-recognition@58 peerDependencies
+8 verbose argv "view" "expo-speech-recognition@58" "peerDependencies"
+9 verbose logfile logs-max:10 dir:/Users/jagjeetsingh/ai-app-factory/.workspaces/f8dc22d6-dbda-4f82-a57d-6d98905e8017/.npm-cache/_logs/2026-10-25T16_40_55_505Z-
+10 verbose logfile /Users/jagjeetsingh/ai-app-factory/.workspaces/f8dc22d6-dbda-4f82-a57d-6d98905e8017/.npm-cache/_logs/2026-10-25T16_40_55_505Z-debug-0.log
+11 silly logfile done cleaning log files
+12 http fetch GET 200 https://registry.npmjs.org/npm 124ms
+13 http fetch GET 200 https://registry.npmjs.org/expo-speech-recognition 334ms (cache miss)
+14 verbose cwd /Users/jagjeetsingh/ai-app-factory/.workspaces/f8dc22d6-dbda-4f82-a57d-6d98905e8017
+15 verbose os Darwin 27.0.0
+16 verbose node v22.20.0
+17 verbose npm  v10.9.3
+18 notice
+18 notice New major version of npm available! 10.9.3 -> 12.2.1
+18 notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+18 notice To update run: npm install -g npm@12.2.1
+18 notice  { force: true, [Symbol(proc-log.meta)]: true }
+19 verbose exit 0
+20 info ok

@@ -1,0 +1,19 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.3
+2 info using node@v22.20.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/jagjeetsingh/ai-app-factory/.workspaces/f8dc22d6-dbda-4f82-a57d-6d98905e8017/.npmrc
+5 silly config load:file:/Users/jagjeetsingh/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm run journeys
+8 verbose argv "run" "journeys" "--loglevel" "silent"
+9 verbose logfile logs-max:10 dir:/Users/jagjeetsingh/ai-app-factory/.workspaces/f8dc22d6-dbda-4f82-a57d-6d98905e8017/.npm-cache/_logs/2026-10-28T20_41_27_341Z-
+10 verbose logfile /Users/jagjeetsingh/ai-app-factory/.workspaces/f8dc22d6-dbda-4f82-a57d-6d98905e8017/.npm-cache/_logs/2026-10-28T20_41_27_341Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 verbose cwd /Users/jagjeetsingh/ai-app-factory/.workspaces/f8dc22d6-dbda-4f82-a57d-6d98905e8017
+14 verbose os Darwin 27.0.0
+15 verbose node v22.20.0
+16 verbose npm  v10.9.3
+17 verbose exit 0
+18 info ok

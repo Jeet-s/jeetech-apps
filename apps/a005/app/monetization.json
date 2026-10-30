@@ -1,0 +1,50 @@
+{
+  "_note": "Overwritten per app by the factory from its Play slot. These defaults are Google's public TEST ids, so unassigned builds never serve live ads. \"subscriptions\" is filled only when the app has AI or cloud sync.",
+  "admob": {
+    "appId": "ca-app-pub-5054561222360217~8710097558",
+    "banner": "ca-app-pub-5054561222360217/6785185529",
+    "rewarded": "ca-app-pub-5054561222360217/5472103858",
+    "interstitial": "ca-app-pub-5054561222360217/5872840366",
+    "test": false
+  },
+  "iap": [
+    {
+      "sku": "pro_unlock",
+      "title": "Pro (lifetime)",
+      "description": "Unlock every Pro feature forever and remove ads. One-time purchase.",
+      "priceUsd": 33.99,
+      "consumable": false
+    },
+    {
+      "sku": "remove_ads",
+      "title": "Remove Ads",
+      "description": "Remove all ads forever.",
+      "priceUsd": 4.99,
+      "consumable": false
+    }
+  ],
+  "subscriptions": [
+    {
+      "sku": "pass_1month",
+      "period": "P1M",
+      "priceUsd": 4.99,
+      "trialDays": 0
+    },
+    {
+      "sku": "pass_3month",
+      "period": "P1M",
+      "priceUsd": 12.99,
+      "trialDays": 0
+    },
+    {
+      "sku": "pro_yearly",
+      "period": "P1Y",
+      "priceUsd": 16.99,
+      "trialDays": 3
+    }
+  ],
+  "legal": {
+    "privacyUrl": "https://app-cloud-api-production.up.railway.app/cloud/legal/a005/privacy.html",
+    "termsUrl": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+  }
+}

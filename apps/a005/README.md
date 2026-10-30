@@ -1,7 +1,9 @@
-# JeeTech a005
+# TOEFL Preparation App
 
-Play package `com.jeetech.a005`. Built and maintained by the AI App Factory.
+TOEFL speaking practice with instant AI score, transcript and feedback
 
-- `docs/` — GitHub Pages: landing page, privacy policy, terms
-- `app/` — app source as shipped
-- `store/` — store listing + graphics
+- Google Play: https://play.google.com/store/apps/details?id=com.jeetech.a005
+- Privacy policy: https://jeet-s.github.io/jeetech-apps/a005/privacy.html
+- Current version: 1.0.1
+
+`app/` is the Expo (React Native) source as shipped; `store/` holds the listing and graphics.

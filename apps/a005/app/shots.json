@@ -1,0 +1,10 @@
+{
+  "_note": "Store screenshot scenes — real Band Up states rendered by src/screenshots.tsx with seeded data (a user a few weeks in). Captured on an emulator for the Play listing.",
+  "scenes": [
+    { "id": "practice", "caption": "Both 2026 tasks, no sign-up" },
+    { "id": "result", "caption": "Score, transcript & fix-it tips" },
+    { "id": "improved", "caption": "Your answer, rewritten a band up" },
+    { "id": "progress", "caption": "Track skills, drill weak spots" },
+    { "id": "pro", "caption": "All practice free · exam passes" }
+  ]
+}

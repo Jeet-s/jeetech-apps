@@ -1,0 +1,105 @@
+{
+  "style": "Calm, premium, modern flat-vector illustration with soft dimensional touches. Clean geometric shapes with generously rounded corners (12–28px radius feel) and crisp, even-weight 2–3px rounded line accents in place of outlines. Fills are flat with a single soft top-left light source: subtle linear gradients (navy to indigo) on large surfaces, gentle inner highlights and low-opacity soft drop shadows (indigo-tinted, never black) to lift cards, mics and badges. Materials read as matte frosted glass and soft-touch plastic, with no glossy chrome or heavy textures. Characters are faceless, simplified silhouettes with warm, diverse skin tones and neutral modern clothing, so the app feels welcoming to learners across South Asia, East Asia, Africa, the Middle East and Latin America. Sound waves and score rings are the recurring motif: smooth rounded bars and partial arcs, with green for success and amber for fix-this-next. Backgrounds are an airy off-white or transparent, with a few large pale-indigo blobs and sparse dot accents for depth. Mood is focused, encouraging and trustworthy, like a good tutor, never childish, never exam-stressful. Edges are clean and anti-aliased with no sketchy strokes. Contrast stays high enough to read on small phone screens. No text or letters in artwork except tabular digits, and no brands or logos. Suitable for Everyone.",
+  "palette": [
+    "#0F172A",
+    "#6366F1",
+    "#EEF2FF",
+    "#22C55E",
+    "#F59E0B",
+    "#F8FAFC"
+  ],
+  "ui_palette": {
+    "primary": "#4F46E5",
+    "primaryDark": "#3730A3",
+    "primarySoft": "#EEF2FF",
+    "accent": "#F59E0B",
+    "success": "#15803D",
+    "warning": "#B45309",
+    "bg": "#F8FAFC",
+    "surface": "#FFFFFF",
+    "ink": "#0F172A",
+    "inkSoft": "#475569"
+  },
+  "assets": [
+    {
+      "id": "onb_speak_get_scored",
+      "kind": "illustration",
+      "file": "onb_speak_get_scored.png",
+      "usage": "Onboarding screen 1: Speak. Get scored. Fix it.",
+      "width": 512,
+      "height": 421
+    },
+    {
+      "id": "onb_private_mic",
+      "kind": "illustration",
+      "file": "onb_private_mic.png",
+      "usage": "Onboarding screen 2: private mic permission and level check",
+      "width": 512,
+      "height": 462
+    },
+    {
+      "id": "onb_no_account",
+      "kind": "illustration",
+      "file": "onb_no_account.png",
+      "usage": "Onboarding screen 3: start practising instantly with no account",
+      "width": 512,
+      "height": 434
+    },
+    {
+      "id": "empty_history",
+      "kind": "empty_state",
+      "file": "empty_history.png",
+      "usage": "Empty state for the History/Attempts list before the first recording",
+      "width": 464,
+      "height": 512
+    },
+    {
+      "id": "empty_progress",
+      "kind": "empty_state",
+      "file": "empty_progress.png",
+      "usage": "Empty state for the Progress/score trend chart before enough attempts",
+      "width": 512,
+      "height": 452
+    },
+    {
+      "id": "empty_queue",
+      "kind": "empty_state",
+      "file": "empty_queue.png",
+      "usage": "Empty state for the Offline queue / Score when online list",
+      "width": 512,
+      "height": 498
+    },
+    {
+      "id": "pro_hero",
+      "kind": "hero",
+      "file": "pro_hero.png",
+      "usage": "Pro upgrade sheet hero image",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "id": "logo_mark",
+      "kind": "ui",
+      "file": "logo_mark.png",
+      "usage": "In-app logo mark for the home header and splash",
+      "width": 506,
+      "height": 512
+    },
+    {
+      "id": "badge_band_up",
+      "kind": "ui",
+      "file": "badge_band_up.png",
+      "usage": "Achievement badge shown when the user improves a band or score",
+      "width": 446,
+      "height": 512
+    },
+    {
+      "id": "badge_streak",
+      "kind": "ui",
+      "file": "badge_streak.png",
+      "usage": "Achievement badge for practice streak milestones",
+      "width": 493,
+      "height": 512
+    }
+  ]
+}

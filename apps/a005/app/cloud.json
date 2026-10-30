@@ -1,0 +1,15 @@
+{
+  "_note": "Factory-owned. Written per build from the app's capabilities; empty urls = capability off.",
+  "app": "com.jeetech.a005",
+  "apiUrl": "https://app-cloud-api-production.up.railway.app",
+  "authUrl": "https://app-cloud-api-production.up.railway.app/auth/v1",
+  "anonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIiwiaWF0IjoxNzAwMDAwMDAwLCJleHAiOjQxMDI0NDQ4MDB9.HlxpJrHEwKOuv0py3sHV5Zav35h7sYjECUIM-aLTqrs",
+  "ai": true,
+  "cloud": {
+    "enabled": true,
+    "mode": "backup",
+    "proOnly": false,
+    "email": true
+  },
+  "deleteAccountUrl": "https://app-cloud-api-production.up.railway.app/cloud/delete-account?app=com.jeetech.a005"
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Band Up — Speaking Coach for the New English Test Format (AI Scoring & Rewrite)",
+  "package": "com.jeetech.a005",
+  "coreFeature": "Answer a timed TOEFL speaking prompt by voice → AI score per rubric, transcript, and improved model answer",
+  "screens": ["Onboarding", "Today", "Stats", "Settings", "Pro"],
+  "monetization": { "proUnlockIap": true, "removeAdsIap": true, "banner": true, "interstitials": false },
+  "analyticsEvents": ["app_open", "onboarding_done", "core_action", "screen_view", "paywall_view", "iap_purchase"],
+  "_note": "Filled by the Claude Code builder from the PRD + asset manifest. The factory checks this file exists to recognise a workspace."
+}

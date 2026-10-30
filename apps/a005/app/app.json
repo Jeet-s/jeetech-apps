@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "Band Up",
+    "slug": "band-up-speaking-coach-for-the-new-engli",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "android": {
+      "package": "com.jeetech.a005",
+      "versionCode": 2,
+      "softwareKeyboardLayoutMode": "resize",
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.WAKE_LOCK",
+        "android.permission.READ_APP_BADGE"
+      ],
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/store/adaptive-foreground.png",
+        "backgroundColor": "#fefefe"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.jeetech.a005",
+      "supportsTablet": false,
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "scheme": "band-up-speaking-coach-for-the-new-engli",
+    "userInterfaceStyle": "automatic",
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "color": "#4F46E5"
+        }
+      ],
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Band Up uses the microphone only while you practise, to turn your spoken answer into text on your phone for scoring.",
+          "speechRecognitionPermission": "Band Up transcribes your practice answers on your phone so the AI coach can score what you said. Audio never leaves your device."
+        }
+      ]
+    ],
+    "backgroundColor": "#F8FAFB",
+    "splash": {
+      "backgroundColor": "#F8FAFB"
+    },
+    "icon": "./assets/store/icon.png"
+  }
+}
