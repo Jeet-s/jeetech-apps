@@ -55,12 +55,22 @@ export function ProSheet({ visible, from, onClose }: { visible: boolean; from: s
     if (restoring) return;
     setRestoring(true);
     setRestoreMsg(null);
-    const n = await iap.restore().catch(() => 0);
-    setRestoring(false);
-    feedback(n ? "unlock" : "pop", n ? "success" : "warning");
-    const text = n ? "Purchases restored — Pro is now active." : "No previous purchase found on this account.";
-    setRestoreMsg({ ok: !!n, text });
-    toast(text);
+    try {
+      const n = await iap.restore();
+      feedback(n ? "unlock" : "pop", n ? "success" : "warning");
+      const text = n ? "Restored — Pro is on." : "No purchases found.";
+      setRestoreMsg({ ok: !!n, text });
+      toast(text);
+    } catch {
+      // A thrown restore (store unreachable, flaky connection) must NOT read as
+      // "no purchases" — show a distinct, retryable error instead.
+      feedback("pop", "warning");
+      const text = "Couldn't restore — check your connection and try again.";
+      setRestoreMsg({ ok: false, text });
+      toast(text);
+    } finally {
+      setRestoring(false);
+    }
   };
 
   // Prefer live store plans (localized price, real trial, offer token); fall back to the

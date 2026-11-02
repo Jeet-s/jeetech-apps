@@ -179,6 +179,44 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:304027183289:android:2c0555d9309564d3dbd368",
+        "android_client_info": {
+          "package_name": "com.jeetech.casecloseddaily"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBPuqP28GFcM-LtGl5g3yjHl0DNc0y6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304027183289:android:3061a04a2de9e101dbd368",
+        "android_client_info": {
+          "package_name": "com.jeetech.dukaandreams"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBPuqP28GFcM-LtGl5g3yjHl0DNc0y6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:304027183289:android:b1880f60df6a0225dbd368",
         "android_client_info": {
           "package_name": "com.jeetech.footballauctionwc"

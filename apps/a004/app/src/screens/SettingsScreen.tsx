@@ -109,7 +109,16 @@ export function SettingsScreen({ bottomInset, onPro }: { bottomInset: number; on
           <ListItem icon="shield" title="Where your data lives" subtitle={cloud.enabled ? "On this phone; backed up to the cloud only when signed in" : "Only on this phone"} onPress={() => Alert.alert("Your data", "Readings, meals and medications are stored on this device. Cloud backup is optional and only used when you sign in with an email code. We never sell data or show ads.")} />
           {legal.privacyUrl ? <ListItem icon="doc" title="Privacy policy" onPress={() => Linking.openURL(legal.privacyUrl!)} /> : null}
           <ListItem icon="info" title="Wellness disclaimer" onPress={() => Alert.alert("Wellness only", `${REPORT_DISCLAIMER}\n\n${LOW_SAFETY_NOTE}`)} />
-          <ListItem icon="history" title="Restore purchases" onPress={async () => { const n = await iap.restore().catch(() => 0); feedback(n ? "unlock" : "pop", n ? "success" : "warning"); toast(n ? "Purchases restored — Pro is now active" : "Nothing to restore — no previous purchase found on this account"); }} />
+          <ListItem icon="history" title="Restore purchases" onPress={async () => {
+            try {
+              const n = await iap.restore();
+              feedback(n ? "unlock" : "pop", n ? "success" : "warning");
+              toast(n ? "Restored — Pro is on" : "No purchases found");
+            } catch {
+              feedback("pop", "warning");
+              toast("Couldn't restore — check your connection and try again");
+            }
+          }} />
           <ListItem icon="trash" title="Delete all data" destructive onPress={deleteAll} />
         </Card>
 
