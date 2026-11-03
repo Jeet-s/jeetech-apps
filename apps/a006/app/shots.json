@@ -1,0 +1,11 @@
+{
+  "_note": "Store screenshot scenes. Each id is opened with <scheme>://shot/<id> and captured on an emulator. Real app states with seeded data — see src/screenshots.tsx.",
+  "scenes": [
+    { "id": "score", "caption": "Score every ball, fast" },
+    { "id": "home", "caption": "Works offline, no login" },
+    { "id": "scorecard", "caption": "Full scorecards, free forever" },
+    { "id": "stats", "caption": "Career stats never paywalled" },
+    { "id": "cup", "caption": "Run cups with live NRR" },
+    { "id": "pro", "caption": "Pro keeps your stats free" }
+  ]
+}

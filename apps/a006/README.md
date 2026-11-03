@@ -1,7 +1,9 @@
-# JeeTech a006
+# Cricket Tournament App: Scorer
 
-Play package `com.jeetech.a006`. Built and maintained by the AI App Factory.
+Cricket tournament app with cricket scorer, fixtures, NRR table and team stats
 
-- `docs/` — GitHub Pages: landing page, privacy policy, terms
-- `app/` — app source as shipped
-- `store/` — store listing + graphics
+- Google Play: https://play.google.com/store/apps/details?id=com.jeetech.a006
+- Privacy policy: https://jeet-s.github.io/jeetech-apps/a006/privacy.html
+- Current version: 1.0.1
+
+`app/` is the Expo (React Native) source as shipped; `store/` holds the listing and graphics.

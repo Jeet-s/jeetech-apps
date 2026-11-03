@@ -1,0 +1,105 @@
+{
+  "style": "Modern flat-vector illustration with soft, tactile depth: clean geometric shapes, gently rounded corners, and crisp edges with no outlines, finished by subtle paper-grain texture and very light long shadows. Shading is limited to two tones per form (base plus a slightly deeper tint), with a single warm late-afternoon light from the top-left that casts soft green-tinted shadows and adds a faint golden rim glow. Materials read as simple matte surfaces: leather ball with a white stitched seam, pale willow bat, painted brick, worn pitch turf. Compositions are airy and uncluttered with generous negative space, centered subjects and a calm, friendly, sunlit gully-cricket mood. Characters are stylised, faceless or minimally featured, diverse in skin tone and dress, all-ages and rated Everyone, with no real brands, logos or team kits. The palette stays restrained: pitch green, ball gold, cream, and terracotta brick accents, with one accent colour per scene, so every asset sits cohesively on the light UI and stays legible on small phone screens.",
+  "palette": [
+    "#0B6E4F",
+    "#F5B700",
+    "#FFF8E7",
+    "#C8553D",
+    "#1F2A37",
+    "#8FD3B6"
+  ],
+  "ui_palette": {
+    "primary": "#0B6E4F",
+    "primaryDark": "#084F39",
+    "primarySoft": "#DDF1E8",
+    "accent": "#F5B700",
+    "success": "#1E8E4E",
+    "warning": "#B45309",
+    "bg": "#FBF8F1",
+    "surface": "#FFFFFF",
+    "ink": "#1F2A37",
+    "inkSoft": "#5B6675"
+  },
+  "assets": [
+    {
+      "id": "ill_onb_01_start",
+      "kind": "illustration",
+      "file": "ill_onb_01_start.png",
+      "usage": "Onboarding screen 1: Start a match in seconds, no login",
+      "width": 512,
+      "height": 477
+    },
+    {
+      "id": "ill_onb_02_offline",
+      "kind": "illustration",
+      "file": "ill_onb_02_offline.png",
+      "usage": "Onboarding screen 2: Scores every ball, works offline",
+      "width": 512,
+      "height": 478
+    },
+    {
+      "id": "ill_onb_03_stats",
+      "kind": "illustration",
+      "file": "ill_onb_03_stats.png",
+      "usage": "Onboarding screen 3: Free career stats and share cards",
+      "width": 512,
+      "height": 462
+    },
+    {
+      "id": "es_matches",
+      "kind": "empty_state",
+      "file": "es_matches.png",
+      "usage": "Empty state for Matches list",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "id": "es_tournaments",
+      "kind": "empty_state",
+      "file": "es_tournaments.png",
+      "usage": "Empty state for Tournaments list",
+      "width": 512,
+      "height": 440
+    },
+    {
+      "id": "es_players_stats",
+      "kind": "empty_state",
+      "file": "es_players_stats.png",
+      "usage": "Empty state for Players and Stats lists",
+      "width": 512,
+      "height": 347
+    },
+    {
+      "id": "hero_pro_sheet",
+      "kind": "hero",
+      "file": "hero_pro_sheet.png",
+      "usage": "Hero image on the Pro sheet, which stresses supporting the app with no ads and no paywalled stats",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "id": "ui_logo_mark",
+      "kind": "ui",
+      "file": "ui_logo_mark.png",
+      "usage": "In-app logo mark for splash and headers",
+      "width": 512,
+      "height": 503
+    },
+    {
+      "id": "ui_badge_century",
+      "kind": "ui",
+      "file": "ui_badge_century.png",
+      "usage": "Achievement badge set for century, hat-trick and player-of-the-match",
+      "width": 512,
+      "height": 213
+    },
+    {
+      "id": "ui_share_card_frame",
+      "kind": "ui",
+      "file": "ui_share_card_frame.png",
+      "usage": "Decorative background and frame for generated share cards",
+      "width": 499,
+      "height": 512
+    }
+  ]
+}

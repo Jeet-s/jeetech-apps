@@ -1,0 +1,96 @@
+{
+  "family": "pulse",
+  "label": "Pulse — energetic & bold",
+  "scheme": "dark",
+  "language": "High energy: dark-first surfaces with a neon accent (lime/orange), condensed UPPERCASE headings, huge stat numbers, rings and progress everywhere, punchy snappy motion, achievement badges. Feels like a scoreboard.",
+  "fonts": {
+    "display": "BarlowCondensed_600SemiBold",
+    "displayBold": "BarlowCondensed_700Bold",
+    "regular": "Inter_400Regular",
+    "medium": "Inter_500Medium",
+    "semibold": "Inter_600SemiBold",
+    "bold": "Inter_700Bold"
+  },
+  "radius": {
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 22,
+    "pill": 999
+  },
+  "space": {
+    "xs": 4,
+    "sm": 8,
+    "md": 11,
+    "lg": 15,
+    "xl": 23,
+    "xxl": 30
+  },
+  "elevation": "lifted",
+  "motion": "snappy",
+  "hero": "gradient",
+  "headingCase": "uppercase",
+  "headingTracking": 0.6,
+  "light": {
+    "primary": "#0E9F6E",
+    "primaryDark": "#0B7753",
+    "primarySoft": "#E2F3EE",
+    "accent": "#FFB020",
+    "success": "#16A34A",
+    "successSoft": "#DCFCE7",
+    "warning": "#F59E0B",
+    "warningSoft": "#FEF3C7",
+    "danger": "#DC2626",
+    "dangerSoft": "#FEE2E2",
+    "bg": "#F8FAFA",
+    "surface": "#FFFFFF",
+    "surfaceAlt": "#EFF6F4",
+    "border": "#E1E3E5",
+    "ink": "#0F172A",
+    "inkSoft": "#475569",
+    "inkMuted": "#64748B",
+    "onPrimary": "#FFFFFF",
+    "scrim": "rgba(15,23,42,0.45)"
+  },
+  "dark": {
+    "primary": "#0E9F6E",
+    "primaryDark": "#0A6F4D",
+    "primarySoft": "#0D2B24",
+    "accent": "#FFB020",
+    "success": "#4ADE80",
+    "successSoft": "#173325",
+    "warning": "#FBBF24",
+    "warningSoft": "#332E17",
+    "danger": "#F87171",
+    "dangerSoft": "#332123",
+    "bg": "#0D1214",
+    "surface": "#191E20",
+    "surfaceAlt": "#232729",
+    "border": "#2F3335",
+    "ink": "#F1F5F9",
+    "inkSoft": "#CBD5E1",
+    "inkMuted": "#94A3B8",
+    "onPrimary": "#FFFFFF",
+    "scrim": "rgba(0,0,0,0.6)"
+  },
+  "gradient": {
+    "light": [
+      "#2BAB7F",
+      "#39A260"
+    ],
+    "dark": [
+      "#0D8F63",
+      "#4AA35B"
+    ]
+  },
+  "categorical": [
+    "#0E9F6E",
+    "#FFB020",
+    "#A3E635",
+    "#F97316",
+    "#22D3EE",
+    "#F43F5E",
+    "#FACC15",
+    "#A78BFA"
+  ]
+}

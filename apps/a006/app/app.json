@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "Gully Score",
+    "slug": "gully-score-local-cricket-scorer",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "android": {
+      "softwareKeyboardLayoutMode": "resize",
+      "package": "com.jeetech.a006",
+      "versionCode": 2,
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS"
+      ],
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.READ_APP_BADGE",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.RECEIVE_BOOT_COMPLETED"
+      ],
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/store/adaptive-foreground.png",
+        "backgroundColor": "#000000"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.jeetech.a006",
+      "supportsTablet": false,
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "scheme": "gully-score-local-cricket-scorer",
+    "userInterfaceStyle": "dark",
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "color": "#4F46E5"
+        }
+      ]
+    ],
+    "backgroundColor": "#0D1214",
+    "splash": {
+      "backgroundColor": "#0D1214"
+    },
+    "icon": "./assets/store/icon.png"
+  }
+}
