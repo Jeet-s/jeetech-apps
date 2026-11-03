@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { Linking, StyleSheet, Text as RNText, TextInput as RNTextInput, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import Animated, { FadeIn } from "react-native-reanimated";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 // Require only the four Inter weights the theme uses (see src/ui/theme.ts).
@@ -144,7 +143,7 @@ function Main() {
   const bottom = TAB_BAR_HEIGHT;
   return (
     <View style={styles.root}>
-      <Animated.View key={tab} entering={FadeIn.duration(180)} style={styles.root}>
+      <View style={styles.root}>
         {tab === "today" ? (
           <TodayScreen bottomInset={bottom} onPro={openPro} />
         ) : tab === "templates" ? (
@@ -154,7 +153,7 @@ function Main() {
         ) : (
           <SettingsScreen bottomInset={bottom} onPro={openPro} />
         )}
-      </Animated.View>
+      </View>
       <TabBar tabs={TABS} active={tab} onChange={setTab} />
       <ProSheet visible={!!pro} from={pro ?? ""} onClose={closePro} />
       <ToastHost bottom={TAB_BAR_HEIGHT + insets.bottom + banner + 12} />

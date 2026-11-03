@@ -22,7 +22,9 @@ export function Sheet({ visible, title, onClose, children }: { visible: boolean;
       <Animated.View style={[StyleSheet.absoluteFill, { backgroundColor: palette.scrim }, dim]}>
         <Pressable style={StyleSheet.absoluteFill} onPress={onClose} accessibilityLabel="Close" />
       </Animated.View>
-      <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined} style={styles.bottom} pointerEvents="box-none">
+      {/* "padding" on Android too: a Modal doesn't resize with the keyboard, so without it the keyboard covered the
+          sheet's fields and buttons (Band Up's sign-in "Send code", 2026-10-25). */}
+      <KeyboardAvoidingView behavior="padding" style={styles.bottom} pointerEvents="box-none">
         <Animated.View style={[styles.sheet, { paddingBottom: insets.bottom + space.lg }, sheet]}>
           <View style={styles.grabber} />
           {title ? (
@@ -34,6 +36,7 @@ export function Sheet({ visible, title, onClose, children }: { visible: boolean;
           {children}
         </Animated.View>
       </KeyboardAvoidingView>
+      {visible ? <ToastHost bottom={insets.bottom + 24} /> : null}
     </Modal>
   );
 }
@@ -70,11 +73,13 @@ export function EmptyState({
 }
 
 type ToastMsg = { id: number; text: string; action?: { label: string; onPress: () => void } };
-let push: ((m: Omit<ToastMsg, "id">) => void) | null = null;
+// Every mounted ToastHost shows the toast: App's host AND the one inside an open Sheet (a Modal covers App's host, so
+// confirmations from sheet actions were invisible — "taps had no visible effect" in QA).
+const hosts = new Set<(m: Omit<ToastMsg, "id">) => void>();
 
-/** Show a short confirmation ("Saved", "Deleted · Undo"). Mount <ToastHost/> once in App. */
+/** Show a short confirmation ("Saved", "Deleted · Undo"). App mounts <ToastHost/>; every Sheet has its own. */
 export function toast(text: string, action?: ToastMsg["action"]): void {
-  push?.({ text, action });
+  for (const h of hosts) h({ text, action });
 }
 
 export function ToastHost({ bottom = 96 }: { bottom?: number }) {
@@ -82,13 +87,14 @@ export function ToastHost({ bottom = 96 }: { bottom?: number }) {
   useEffect(() => {
     let n = 0;
     let timer: ReturnType<typeof setTimeout> | null = null;
-    push = (m) => {
+    const host = (m: Omit<ToastMsg, "id">) => {
       if (timer) clearTimeout(timer);
       setMsg({ ...m, id: ++n });
       timer = setTimeout(() => setMsg(null), m.action ? 5000 : 2200);
     };
+    hosts.add(host);
     return () => {
-      push = null;
+      hosts.delete(host);
       if (timer) clearTimeout(timer);
     };
   }, []);

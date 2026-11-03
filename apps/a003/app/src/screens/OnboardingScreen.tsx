@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Image, StyleSheet, Text, View, useWindowDimensions } from "react-native";
-import Animated, { FadeInRight, FadeOutLeft } from "react-native-reanimated";
 import { Button, Card, FooterScreen, Icon, Segmented, Tappable, feedback, palette, radius, space, toast, type } from "../ui";
 import { art } from "../art";
 import { STARTER_TEMPLATES } from "../core/model";
@@ -90,7 +89,7 @@ export function OnboardingScreen({ onDone }: { onDone: () => void }) {
       }
       footer={footer}
     >
-      <Animated.View key={step} entering={FadeInRight.duration(240)} exiting={FadeOutLeft.duration(140)} style={[styles.body, { gap }]}>
+      <View style={[styles.body, { gap }]}>
         {step === 0 ? (
           <>
             <Image source={art.onboarding_1_drag_create} style={[styles.art, short && styles.artShort]} resizeMode="contain" accessibilityIgnoresInvertColors />
@@ -102,7 +101,7 @@ export function OnboardingScreen({ onDone }: { onDone: () => void }) {
               <WinRow icon="plus" title="Drag to create, stretch to resize" body="No forms — block out time with your thumb." />
               <WinRow icon="shift" title="Running late? Shift in one tap" body="Slide the rest of your day later, all at once." />
               <WinRow icon="flame" title="ADHD-friendly live cues" body="An Active Block banner counts you to the next switch." />
-              <WinRow icon="lock" title="Offline, no account, no ads sneaking in" body="Your plan stays on your phone." />
+              <WinRow icon="lock" title="Offline & private — ad-free with Pro" body="No account needed. Your plan stays on your phone." />
             </View>
           </>
         ) : step === 1 ? (
@@ -147,7 +146,7 @@ export function OnboardingScreen({ onDone }: { onDone: () => void }) {
             </View>
           </>
         )}
-      </Animated.View>
+      </View>
     </FooterScreen>
   );
 }

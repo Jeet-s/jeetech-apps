@@ -473,7 +473,7 @@ export function TodayScreen({ bottomInset, onPro, demo }: { bottomInset: number;
               <View style={styles.lateIcon}><Icon name="shift" size={20} color={palette.warning} /></View>
               <View style={{ flex: 1 }}>
                 <Text style={type.bodyStrong}>Running late?</Text>
-                <Text style={type.caption} numberOfLines={1}>Shift the rest of your day in one tap — no drag</Text>
+                <Text style={type.caption} numberOfLines={2}>Shift the rest of your day in one tap — no drag</Text>
               </View>
               <View style={styles.latePill}><Text style={[type.label, { color: palette.warning }]}>Shift</Text></View>
             </Card>

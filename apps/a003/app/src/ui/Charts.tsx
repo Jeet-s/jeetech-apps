@@ -1,11 +1,11 @@
-import { useEffect, useMemo } from "react";
+import { memo, useEffect, useMemo } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
 import { Canvas, Group, Path, Skia } from "@shopify/react-native-skia";
 import { categorical, palette, space, type } from "./theme";
 
-/** Animated circular progress (0..1) with a centred label. */
-export function ProgressRing({
+/** Animated circular progress (0..1) with a centred label. Memoised: holds a Skia <Canvas>. */
+export const ProgressRing = memo(function ProgressRing({
   value,
   size = 120,
   stroke = 12,
@@ -46,7 +46,7 @@ export function ProgressRing({
       </View>
     </View>
   );
-}
+});
 
 function Bar({ frac, color, height }: { frac: number; color: string; height: number }) {
   const h = useSharedValue(0);
@@ -110,7 +110,7 @@ export function BarChart({
  * categorical colours in order, the total in the centre, gaps between segments.
  * Pair with <Legend> — never make users guess what a colour means.
  */
-export function DonutChart({
+export const DonutChart = memo(function DonutChart({
   data,
   size = 160,
   stroke = 22,
@@ -161,7 +161,7 @@ export function DonutChart({
       </View>
     </View>
   );
-}
+});
 
 /** Colour key for a chart: dot + label + value, in the same order/colours as the chart. */
 export function Legend({ items }: { items: { label: string; value?: string; color?: string }[] }) {
