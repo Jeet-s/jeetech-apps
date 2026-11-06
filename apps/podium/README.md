@@ -1,4 +1,4 @@
-# Podium: Public Speaking App
+# Podium: Public Speaking Coach
 
 Public speaking practice app: AI speech coach to cut filler words and fix pace
 
