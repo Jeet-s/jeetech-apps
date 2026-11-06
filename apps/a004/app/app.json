@@ -2,11 +2,11 @@
   "expo": {
     "name": "Sugar Plate",
     "slug": "sugar-plate-diabetes-meal-coach",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "android": {
       "package": "com.jeetech.a004",
-      "versionCode": 2,
+      "versionCode": 3,
       "permissions": [
         "android.permission.POST_NOTIFICATIONS",
         "android.permission.CAMERA"
@@ -26,7 +26,7 @@
       "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/store/adaptive-foreground.png",
-        "backgroundColor": "#fef5df"
+        "backgroundColor": "#FDB901"
       }
     },
     "ios": {

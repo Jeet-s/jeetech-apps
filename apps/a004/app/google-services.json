@@ -217,9 +217,47 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:304027183289:android:0c0ff1430e3a7c99dbd368",
+        "android_client_info": {
+          "package_name": "com.jeetech.fluentfriend"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBPuqP28GFcM-LtGl5g3yjHl0DNc0y6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:304027183289:android:b1880f60df6a0225dbd368",
         "android_client_info": {
           "package_name": "com.jeetech.footballauctionwc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBPuqP28GFcM-LtGl5g3yjHl0DNc0y6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304027183289:android:3d29e067b4a6e5a5dbd368",
+        "android_client_info": {
+          "package_name": "com.jeetech.g001"
         }
       },
       "oauth_client": [],
@@ -369,9 +407,66 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:304027183289:android:83dddc73b59498c6dbd368",
+        "android_client_info": {
+          "package_name": "com.jeetech.podium"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBPuqP28GFcM-LtGl5g3yjHl0DNc0y6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304027183289:android:b80c249d1c35a226dbd368",
+        "android_client_info": {
+          "package_name": "com.jeetech.stationzen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBPuqP28GFcM-LtGl5g3yjHl0DNc0y6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:304027183289:android:44b2420126c15b02dbd368",
         "android_client_info": {
           "package_name": "com.jeetech.strikelanes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBPuqP28GFcM-LtGl5g3yjHl0DNc0y6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304027183289:android:028ede60fba3c100dbd368",
+        "android_client_info": {
+          "package_name": "com.jeetech.t20superovertrumps"
         }
       },
       "oauth_client": [],

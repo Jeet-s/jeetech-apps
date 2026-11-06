@@ -1,5 +1,5 @@
 {
-  "title": "Sugar Plate — Diabetes Meal Coach",
+  "title": "Sugar Plate",
   "package": "com.jeetech.a004",
   "coreFeature": "Photo of your meal → carb and glycemic estimate with a plate-by-plate swap suggestion for Indian, African or Latin dishes, linked to your glucose log",
   "screens": ["Onboarding", "Today", "Stats", "Settings", "Pro"],

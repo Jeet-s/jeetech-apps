@@ -788,6 +788,13 @@ export function LogScreen({ bottomInset, onPro, onLogMeal }: { bottomInset: numb
         ) : (
           todayList
         )}
+
+        {/* Always-visible wellness disclaimer (Google Play health policy): Sugar Plate is a wellness
+            log, not a medical device — a persistent line on the home screen, not only buried in Settings,
+            so a first-time user (and a reviewer) always sees it. */}
+        <Text style={[type.caption, styles.disclaimer]}>
+          Wellness information only — not medical advice or treatment. Follow your own care plan and your clinician.
+        </Text>
       </Screen>
 
       {/* Pinned Save bar: present only while the keypad is open (disabled until the value is
@@ -957,4 +964,5 @@ const styles = StyleSheet.create({
   emptyToday: { flexDirection: "row", alignItems: "flex-start", gap: space.md },
   readingCard: { flexDirection: "row", alignItems: "center", gap: space.md, paddingVertical: space.sm, paddingHorizontal: space.md, minHeight: 64 },
   levelDot: { width: 34, height: 34, borderRadius: 17, alignItems: "center", justifyContent: "center" },
+  disclaimer: { color: palette.inkMuted, textAlign: "center", marginTop: space.sm, paddingHorizontal: space.sm },
 });
