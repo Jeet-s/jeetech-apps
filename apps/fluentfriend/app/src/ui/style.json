@@ -1,0 +1,96 @@
+{
+  "family": "calm",
+  "label": "Calm — soft & reassuring",
+  "scheme": "light",
+  "language": "Gentle and safe: warm off-white tinted surfaces, a soft serif for headings, generous whitespace, large rounded cards, pastel accents, slow eased motion, friendly illustrations, encouraging copy. Never alarming reds, never dense tables; one calm action per screen.",
+  "fonts": {
+    "display": "Fraunces_600SemiBold",
+    "displayBold": "Fraunces_700Bold",
+    "regular": "Nunito_400Regular",
+    "medium": "Nunito_500Medium",
+    "semibold": "Nunito_600SemiBold",
+    "bold": "Nunito_700Bold"
+  },
+  "radius": {
+    "sm": 12,
+    "md": 18,
+    "lg": 24,
+    "xl": 32,
+    "pill": 999
+  },
+  "space": {
+    "xs": 5,
+    "sm": 9,
+    "md": 14,
+    "lg": 18,
+    "xl": 28,
+    "xxl": 37
+  },
+  "elevation": "soft",
+  "motion": "calm",
+  "hero": "tint",
+  "headingCase": "none",
+  "headingTracking": -0.3,
+  "light": {
+    "primary": "#0F766E",
+    "primaryDark": "#0B5953",
+    "primarySoft": "#E2EFEE",
+    "accent": "#F59E0B",
+    "success": "#16A34A",
+    "successSoft": "#DCFCE7",
+    "warning": "#F59E0B",
+    "warningSoft": "#FEF3C7",
+    "danger": "#DC2626",
+    "dangerSoft": "#FEE2E2",
+    "bg": "#F3F7F7",
+    "surface": "#FFFFFF",
+    "surfaceAlt": "#EAF2F2",
+    "border": "#DCE1E3",
+    "ink": "#0F172A",
+    "inkSoft": "#475569",
+    "inkMuted": "#64748B",
+    "onPrimary": "#FFFFFF",
+    "scrim": "rgba(15,23,42,0.45)"
+  },
+  "dark": {
+    "primary": "#63A6A1",
+    "primaryDark": "#457471",
+    "primarySoft": "#1E3134",
+    "accent": "#F59E0B",
+    "success": "#4ADE80",
+    "successSoft": "#18372C",
+    "warning": "#FBBF24",
+    "warningSoft": "#35321D",
+    "danger": "#F87171",
+    "dangerSoft": "#34252A",
+    "bg": "#0F171C",
+    "surface": "#1B2327",
+    "surfaceAlt": "#252C30",
+    "border": "#31373C",
+    "ink": "#F1F5F9",
+    "inkSoft": "#CBD5E1",
+    "inkMuted": "#94A3B8",
+    "onPrimary": "#0B0F14",
+    "scrim": "rgba(0,0,0,0.6)"
+  },
+  "gradient": {
+    "light": [
+      "#2C867F",
+      "#387D5C"
+    ],
+    "dark": [
+      "#599591",
+      "#88A47C"
+    ]
+  },
+  "categorical": [
+    "#0F766E",
+    "#F59E0B",
+    "#8B7CF6",
+    "#F29E9E",
+    "#6CC4A1",
+    "#F5C26B",
+    "#7FB3F5",
+    "#E59BD6"
+  ]
+}

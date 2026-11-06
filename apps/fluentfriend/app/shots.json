@@ -1,0 +1,11 @@
+{
+  "_note": "Store screenshot scenes. Each id is opened with <scheme>://shot/<id> and captured on an emulator — real app states seeded in src/screenshots.tsx.",
+  "scenes": [
+    { "id": "home", "caption": "প্রতিদিন ৫ মিনিটের পথ" },
+    { "id": "speak", "caption": "AI বন্ধুর সাথে কথা বলুন" },
+    { "id": "feedback", "caption": "বাংলায় সংশোধন ও স্কোর" },
+    { "id": "lesson", "caption": "শুনে ও বলে শিখুন" },
+    { "id": "me", "caption": "সাপ্তাহিক অগ্রগতি দেখুন" },
+    { "id": "pro", "caption": "লেসন সবসময় ফ্রি" }
+  ]
+}

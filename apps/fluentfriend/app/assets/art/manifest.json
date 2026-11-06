@@ -1,0 +1,105 @@
+{
+  "style": "Warm, calm, modern flat-vector illustration with a soft editorial feel. Shapes are built from smooth, rounded geometry with generous corner radii and clean, edge-to-edge fills; no outlines except occasional 2px tonal strokes a shade darker than the fill. Shading is minimal: one subtle two-tone cel shadow per form plus soft gradient washes (teal to lighter teal) on large surfaces, and a faint paper-grain texture for tactility. Lighting is gentle, even daylight from the upper left, with no hard cast shadows, only soft ambient blobs beneath objects. Materials read as matte paper and felt, never glossy. Backgrounds are warm off-white (#FFF9F0) with large soft organic blobs in pale teal and sand. Teal dominates, with amber used sparingly as the spark of delight (scarf, sparkles, highlights) and coral for gentle alerts. Characters are friendly, diverse Bengali adults (saris, kurtas, shirts, school bags, shop aprons) with simplified faces, dot eyes, warm brown skin tones, and natural proportions. The mascot Bondhu is a round teal speech bubble with dot eyes, a gentle smile and a tiny amber scarf. Settings hint at everyday Bengal (tea stall, market, rickshaw, bank counter) without clutter. Mood: encouraging, unhurried, confidence-building, premium and trustworthy. No text, letters or logos in artwork, no brand imitation, and nothing frightening, so it is suitable for Everyone.",
+  "palette": [
+    "#0F766E",
+    "#14B8A6",
+    "#F59E0B",
+    "#FFF9F0",
+    "#134E4A",
+    "#F87171"
+  ],
+  "ui_palette": {
+    "primary": "#0F766E",
+    "primaryDark": "#0B5750",
+    "primarySoft": "#D5F0EC",
+    "accent": "#F59E0B",
+    "success": "#15803D",
+    "warning": "#B45309",
+    "bg": "#FFF9F0",
+    "surface": "#FFFFFF",
+    "ink": "#134E4A",
+    "inkSoft": "#4B6663"
+  },
+  "assets": [
+    {
+      "id": "ic_app_icon",
+      "kind": "ui",
+      "file": "ic_app_icon.png",
+      "usage": "Store and launcher icon (adaptive foreground safe zone 66%)",
+      "width": 504,
+      "height": 512
+    },
+    {
+      "id": "ui_splash_bondhu",
+      "kind": "ui",
+      "file": "ui_splash_bondhu.png",
+      "usage": "Splash screen logo on #FFF9F0 and small logo mark",
+      "width": 486,
+      "height": 512
+    },
+    {
+      "id": "ui_mascot_poses",
+      "kind": "ui",
+      "file": "ui_mascot_poses.png",
+      "usage": "Mascot poses for celebrations, hints, loading and feedback; export individually",
+      "width": 512,
+      "height": 434
+    },
+    {
+      "id": "ill_onb_01_speak_from_day_one",
+      "kind": "illustration",
+      "file": "ill_onb_01_speak_from_day_one.png",
+      "usage": "Onboarding screen 1: welcome, speak from day one",
+      "width": 512,
+      "height": 451
+    },
+    {
+      "id": "ill_onb_02_talk_without_fear",
+      "kind": "illustration",
+      "file": "ill_onb_02_talk_without_fear.png",
+      "usage": "Onboarding screen 2: practice with a friendly AI partner, no fear",
+      "width": 512,
+      "height": 469
+    },
+    {
+      "id": "ill_onb_03_learn_anywhere_offline",
+      "kind": "illustration",
+      "file": "ill_onb_03_learn_anywhere_offline.png",
+      "usage": "Onboarding screen 3: offline packs, ad-light, 5 minutes a day",
+      "width": 512,
+      "height": 502
+    },
+    {
+      "id": "es_home_no_lessons",
+      "kind": "empty_state",
+      "file": "es_home_no_lessons.png",
+      "usage": "Empty state for the course and lessons list when no course is started or no pack is downloaded",
+      "width": 507,
+      "height": 512
+    },
+    {
+      "id": "es_history_no_conversations",
+      "kind": "empty_state",
+      "file": "es_history_no_conversations.png",
+      "usage": "Empty state for the AI conversation history and progress lists with no sessions yet",
+      "width": 512,
+      "height": 486
+    },
+    {
+      "id": "hero_pro_sheet",
+      "kind": "hero",
+      "file": "hero_pro_sheet.png",
+      "usage": "Hero image on the Pro sheet (extra AI minutes, ad-free support)",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "id": "ui_badge_achievement",
+      "kind": "ui",
+      "file": "ui_badge_achievement.png",
+      "usage": "Achievement badge for streaks, day completion and the 30-day certificate",
+      "width": 345,
+      "height": 512
+    }
+  ]
+}

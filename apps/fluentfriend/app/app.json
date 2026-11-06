@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "Fluent Friend",
+    "slug": "fluent-friend-spoken-english-in-bengali",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "android": {
+      "package": "com.jeetech.fluentfriend",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.READ_APP_BADGE"
+      ],
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/store/adaptive-foreground.png",
+        "backgroundColor": "#01bff0"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.jeetech.fluentfriend",
+      "supportsTablet": false,
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Fluent Friend uses the microphone only to turn your spoken English into text on this device so you can practise speaking. Audio is never recorded or uploaded.",
+        "NSSpeechRecognitionUsageDescription": "Fluent Friend turns your spoken English into text on this device to practise speaking and give you feedback. Audio stays on your phone."
+      }
+    },
+    "scheme": "fluent-friend-spoken-english-in-bengali",
+    "userInterfaceStyle": "automatic",
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "color": "#4F46E5"
+        }
+      ],
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Fluent Friend uses the microphone only to turn your spoken English into text on this device so you can practise speaking. Audio is never recorded or uploaded.",
+          "speechRecognitionPermission": "Fluent Friend turns your spoken English into text on this device to practise speaking and give you feedback. Audio stays on your phone.",
+          "androidSpeechServicePackages": [
+            "com.google.android.googlequicksearchbox"
+          ]
+        }
+      ]
+    ],
+    "backgroundColor": "#F3F7F7",
+    "splash": {
+      "backgroundColor": "#F3F7F7"
+    },
+    "icon": "./assets/store/icon.png"
+  }
+}

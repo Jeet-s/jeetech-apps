@@ -1,0 +1,9 @@
+{
+  "title": "Fluent Friend: Spoken English in Bengali",
+  "package": "com.jeetech.fluentfriend",
+  "coreFeature": "pick a real-life scenario → talk with an AI partner by voice → get corrections and a fluency score",
+  "screens": ["Onboarding", "Today", "Stats", "Settings", "Pro"],
+  "monetization": { "proUnlockIap": true, "removeAdsIap": true, "banner": true, "interstitials": false },
+  "analyticsEvents": ["app_open", "onboarding_done", "core_action", "screen_view", "paywall_view", "iap_purchase"],
+  "_note": "Filled by the Claude Code builder from the PRD + asset manifest. The factory checks this file exists to recognise a workspace."
+}
