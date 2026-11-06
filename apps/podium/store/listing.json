@@ -1,0 +1,36 @@
+{
+  "aso": {
+    "primary": "public speaking practice app",
+    "problems": [],
+    "secondary": [
+      "speech coach ai",
+      "ai public speaking",
+      "reduce filler words app",
+      "presentation practice ai",
+      "public speaking"
+    ]
+  },
+  "title": "Podium: Public Speaking App",
+  "category": "Education",
+  "keywords": [
+    "public speaking practice app",
+    "public speaking app",
+    "speech coach ai",
+    "ai public speaking",
+    "reduce filler words",
+    "presentation practice ai",
+    "public speaking",
+    "interview speaking practice"
+  ],
+  "release_notes": "First release: record a speech, get a report with filler words, pace and structure, try the \"Say it instead\" rewrite, and build a daily streak.",
+  "content_rating": "Teen",
+  "full_description": "Podium is a public speaking practice app that gives you a coach's feedback in seconds. Speak for up to a minute, and get a clear report on your filler words, pace and structure, plus a tighter rewrite of your own sentences.\n\nWhether you have a class presentation, a job interview, a pitch, a viva or a wedding toast, a short daily take builds confidence one step at a time. You can start your first take without creating an account.\n\nHOW IT WORKS\n• Pick a prompt and tap record. A quick mic check makes sure we can hear you.\n• Your speech is turned into text on your device by Android's speech recognizer.\n• The transcript is sent to our AI for analysis, and you get your report in moments.\n\nWHAT YOU GET IN EVERY REPORT\n• Transcript with filler words and repeated words highlighted\n• Words per minute and pause check, so you know if you rush or drag\n• Structure check: opening, main point and close\n• Three prioritised tips you can act on right away\n• \"Say it instead\": an AI rewrite of your own words with a stronger opener and closer\n• Retry with the rewrite and compare how your score changes\n\nSCENARIO PRACTICE\nThis public speaking practice app has packs for job interviews, work presentations, meeting updates, startup pitches, viva and thesis defence, class talks, wedding toasts, eulogies, sales calls and impromptu topics. Skip or shuffle any prompt, or enter your own topic for a custom scenario.\n\nBUILD A DAILY HABIT\n• A fresh 60-second daily drill\n• Streaks, XP and a weekly goal\n• Progress trends for pace and filler words over time\n• Event prep with a countdown plan for the big day\n• Short lessons on openers, pacing, pauses and handling nerves\n• Reminders at the time you choose\n\nFREE AND PRO\nThe free version of this public speaking practice app includes daily practice, scenario packs, reports and rewrites. The free version shows ads. Pro removes ads and unlocks more depth, as a one-time unlock or a subscription through Google Play. You see the price and billing period before you buy, and you can cancel any time in Google Play.\n\nYOUR DATA\n• No account needed to use the app. Signing in with an email code is optional and enables cloud backup of your entries.\n• Your voice audio is not uploaded, stored or shared. Only the text transcript is sent to our server and to the AI provider to produce feedback.\n• AI features need an internet connection.\n• Anonymous usage analytics help us improve the app. Delete your account and data in Settings.\n• Every AI response has a \"Report this AI response\" button.\n\nPodium is a coaching tool for building speaking skills. It is not a medical or therapy service.\n\nDownload Podium, your AI public speaking coach, and take your first practice speech today.",
+  "screenshots_plan": [
+    "Fillers highlighted in your transcript",
+    "Say it instead: smarter rewrite",
+    "Daily 60-second drill and streak",
+    "Packs for vivas, pitches, toasts",
+    "Track pace and progress"
+  ],
+  "short_description": "Public speaking practice app: AI speech coach to cut filler words and fix pace"
+}

@@ -1,0 +1,10 @@
+{
+  "_note": "Store screenshot scenes. Each id is opened with <scheme>://shot/<id> and captured on an emulator from the REAL screens with seeded data (see src/screenshots.tsx).",
+  "scenes": [
+    { "id": "report", "caption": "See exactly what to fix" },
+    { "id": "home", "caption": "A 60-second drill a day" },
+    { "id": "progress", "caption": "Watch yourself improve" },
+    { "id": "practice", "caption": "Interviews, pitches & toasts" },
+    { "id": "pro", "caption": "Free to start, fair pricing" }
+  ]
+}

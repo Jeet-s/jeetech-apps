@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Podium",
+    "slug": "podium-ai-public-speaking-coach",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "android": {
+      "package": "com.jeetech.podium",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.READ_APP_BADGE"
+      ],
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/store/adaptive-foreground.png",
+        "backgroundColor": "#33149c"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.jeetech.podium",
+      "supportsTablet": false,
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "scheme": "podium-ai-public-speaking-coach",
+    "userInterfaceStyle": "automatic",
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "color": "#4F46E5"
+        }
+      ]
+    ],
+    "backgroundColor": "#F9F9FB",
+    "splash": {
+      "backgroundColor": "#F9F9FB"
+    },
+    "icon": "./assets/store/icon.png"
+  }
+}

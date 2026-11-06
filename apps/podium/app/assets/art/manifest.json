@@ -1,0 +1,97 @@
+{
+  "style": "Soft-dimensional flat illustration with a premium, calm feel. Clean vector shapes with generously rounded corners and no hard outlines; edges are crisp but friendly. Shading is limited to gentle two-step gradients and subtle inner glows, with a single warm key light from the upper left that casts soft, low-opacity violet shadows. Materials read as matte paper-and-frosted-glass: slightly translucent light beams, velvety solid forms, no gloss or noise. Palette is anchored on deep violet and a warm spotlight gold, supported by cool lavender mist and a calm teal for success, on airy off-white backgrounds with lots of negative space. Characters and figures are simple, diverse, non-photoreal and expressive through posture, with oval eyes and blush cheeks. Mood is reassuring, private and encouraging, like a quiet stage just before the lights come up. It is adult-friendly, rated Everyone, with no text baked into artwork and consistent 2–3px-equivalent rounded stroke weight on any line accents.",
+  "palette": [
+    "#5B3DF5",
+    "#3A22C4",
+    "#FFC83D",
+    "#F7F5FF",
+    "#1E1B3A",
+    "#2EC4A6"
+  ],
+  "ui_palette": {
+    "primary": "#5B3DF5",
+    "primaryDark": "#3A22C4",
+    "primarySoft": "#E8E3FF",
+    "accent": "#FFC83D",
+    "success": "#1F9E85",
+    "warning": "#C77700",
+    "bg": "#F7F5FF",
+    "surface": "#FFFFFF",
+    "ink": "#1E1B3A",
+    "inkSoft": "#5A5778"
+  },
+  "assets": [
+    {
+      "id": "app_icon",
+      "kind": "ui",
+      "file": "app_icon.png",
+      "usage": "App icon (1024x1024, full-bleed, no transparency) and base for adaptive foreground/splash mark",
+      "width": 374,
+      "height": 512
+    },
+    {
+      "id": "onboarding_private_practice",
+      "kind": "illustration",
+      "file": "onboarding_private_practice.png",
+      "usage": "Onboarding screen 1: private, judgment-free practice",
+      "width": 512,
+      "height": 471
+    },
+    {
+      "id": "onboarding_instant_feedback",
+      "kind": "illustration",
+      "file": "onboarding_instant_feedback.png",
+      "usage": "Onboarding screen 2: instant AI report with evidence",
+      "width": 512,
+      "height": 479
+    },
+    {
+      "id": "onboarding_say_it_better",
+      "kind": "illustration",
+      "file": "onboarding_say_it_better.png",
+      "usage": "Onboarding screen 3: say it instead rewrite and progress",
+      "width": 512,
+      "height": 481
+    },
+    {
+      "id": "empty_recordings",
+      "kind": "empty_state",
+      "file": "empty_recordings.png",
+      "usage": "Empty state for Recordings/History list",
+      "width": 385,
+      "height": 512
+    },
+    {
+      "id": "empty_progress",
+      "kind": "empty_state",
+      "file": "empty_progress.png",
+      "usage": "Empty state for Progress/Insights before 3 baseline takes",
+      "width": 512,
+      "height": 440
+    },
+    {
+      "id": "empty_scenarios_saved",
+      "kind": "empty_state",
+      "file": "empty_scenarios_saved.png",
+      "usage": "Empty state for Saved prompts/custom scenarios list",
+      "width": 506,
+      "height": 512
+    },
+    {
+      "id": "hero_pro_sheet",
+      "kind": "hero",
+      "file": "hero_pro_sheet.png",
+      "usage": "Hero image at the top of the Pro upsell sheet",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "id": "badge_first_take",
+      "kind": "ui",
+      "file": "badge_first_take.png",
+      "usage": "Achievement badge for milestones such as First Take and streaks",
+      "width": 364,
+      "height": 512
+    }
+  ]
+}
