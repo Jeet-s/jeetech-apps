@@ -1,0 +1,24 @@
+{
+  "style": "Premium, calm, modern flat-vector illustration with soft dimensional depth. Shapes are chunky, geometric and fully rounded (large corner radii, no sharp points), with clean edges and no outlines except occasional 2px rounded linework in a lighter tint for detail. Rendering uses layered flat fills plus gentle gradients (navy to deep indigo) and soft cyan glow halos behind focal objects; subtle inner highlights on top edges and a faint long soft shadow give a tactile, pill-like, almost silicone-gym-equipment feel. Lighting is a single cool ambient source from above with luminous cyan rim light; amber and green appear as small warm accents for emphasis and success. Waveform bars, speech bubbles, mouth profiles and mics are the recurring motif family. Backgrounds are deep navy with sparse soft-grain gradient and faint concentric sound-ring patterns; light-mode variants sit on warm off-white. No text, no readable letters, no real people, brands or faces beyond abstract friendly mouth profiles. Mood: focused, encouraging, trustworthy, like a quiet modern training studio—adult, uncluttered, rated Everyone. Generous negative space so UI text can overlay.",
+  "palette": [
+    "#0F172A",
+    "#22D3EE",
+    "#F59E0B",
+    "#22C55E",
+    "#F8FAFC",
+    "#6366F1"
+  ],
+  "ui_palette": {
+    "primary": "#0E7490",
+    "primaryDark": "#155E75",
+    "primarySoft": "#CFFAFE",
+    "accent": "#B45309",
+    "success": "#15803D",
+    "warning": "#B45309",
+    "bg": "#F8FAFC",
+    "surface": "#FFFFFF",
+    "ink": "#0F172A",
+    "inkSoft": "#475569"
+  },
+  "assets": []
+}

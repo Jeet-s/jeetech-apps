@@ -1,0 +1,25 @@
+{
+  "_note": "Full-bleed captures of QA-approved real screens. The factory adds captions and framing. Legacy record, sounds and progress links remain supported.",
+  "scenes": [
+    {
+      "id": "practice",
+      "caption": "Make five minutes count"
+    },
+    {
+      "id": "plan",
+      "caption": "Find your three focus sounds"
+    },
+    {
+      "id": "feedback",
+      "caption": "See how tricky sounds work"
+    },
+    {
+      "id": "review",
+      "caption": "Keep useful words ready"
+    },
+    {
+      "id": "pro",
+      "caption": "Choose a plan. Keep practising."
+    }
+  ]
+}

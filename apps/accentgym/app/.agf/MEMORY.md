@@ -1,0 +1,4 @@
+- [Coaching phrase boundaries](repair-memory.md) — preserve complete thoughts within the per-phoneme response budget.
+- [Repeated UX polish repair](ux-polish-repair.md) — show processing and assessment payoff above the fold; device review remains required.
+- [Transcript feedback evidence](ux-scoring-evidence.md) — recognition counts and neutral matching-IPA guides replace ungrounded pronunciation grades.
+- [Store screenshot quality pass](quality-pass.md) — five real scenes: practice/plan/word correction/review/Pro; approved sources unchanged; light/dark render smoke + all gates pass; native visual review pending (browser host unavailable).

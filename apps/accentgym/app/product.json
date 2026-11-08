@@ -1,0 +1,9 @@
+{
+  "title": "Accent Gym: Pronunciation Practice AI",
+  "package": "com.jeetech.accentgym",
+  "coreFeature": "Record a sentence and see which sounds were off with an AI-guided fix and a replay",
+  "screens": ["Onboarding", "Today", "Stats", "Settings", "Pro"],
+  "monetization": { "proUnlockIap": true, "removeAdsIap": true, "banner": true, "interstitials": false },
+  "analyticsEvents": ["app_open", "onboarding_done", "core_action", "screen_view", "paywall_view", "iap_purchase"],
+  "_note": "Filled by the Claude Code builder from the PRD + asset manifest. The factory checks this file exists to recognise a workspace."
+}

@@ -1,0 +1,35 @@
+{
+  "app": "Accent Gym",
+  "repairs": [
+    "Two-screen skippable onboarding; optional diagnostic reachable in Settings",
+    "Explicit coaching for heard words after prompt mismatch; mismatched diagnostics never credited",
+    "Offline listen-and-say completion with persistent confirmation, streak activity, core_action and review hook; no fabricated score",
+    "Fixed-height practice sheet, reserved transcript space, compact microphone row, pinned text-mode keyboard actions",
+    "Immediate press feedback, stop icon, disabled empty text action, plain-language sound examples, supportive focus copy",
+    "Single-flight billing initialization independent of ad startup; shared restore handling and transient retry",
+    "Email code-entry with truthful delivery status, resend and offline continuation"
+  ],
+  "external_blockers": [
+    {
+      "feature": "email_login",
+      "evidence": "Factory docs/HANDOFF.md reports Resend 403: mail.jeetechstudio.in is unverified",
+      "required": "Verify the sending domain in the factory email service; client cannot repair email delivery",
+      "fixed": false
+    },
+    {
+      "feature": "restore_purchases",
+      "evidence": "QA device returned a store error; no error code supplied in the evidence",
+      "required": "Device retest with working billing service/store account after factory rebuild. Unavailable billing remains an explicit failure, never a false empty-account success",
+      "fixed": "recovery and initialization repaired; real restoration unverified"
+    }
+  ],
+  "protected_files": "Factory-owned configuration, cloud/IAP/account modules, native directories and palettes left unchanged",
+  "verification": {
+    "typecheck": "passed",
+    "validate": "126/126",
+    "journeys": "8 goals within 4 steps; 7500 fuzz actions; zero errors/losses/dead ends",
+    "pitfalls": "zero errors or warnings",
+    "restore_orchestration": "4 mocked service scenarios passed"
+  },
+  "device_retest": "Not run: release/native builds are reserved for the factory"
+}

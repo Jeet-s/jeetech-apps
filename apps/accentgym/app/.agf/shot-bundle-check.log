@@ -1,0 +1,42 @@
+🔍 [expo-iap] Config values: horizonAppId=undefined, pinnedStore=play, amazonAppstoreKey=none, vega=auto, onside=false
+📦 [expo-iap] Using the published OpenIAP packages
+Starting Metro Bundler
+
+| (node:33028) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:33028) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:33028) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:33028) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:33028) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:33028) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:33028) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+Android Bundled 16397ms index.js (1883 modules)
+
+› Assets (13):
+assets/sfx/error.wav (11KB)
+assets/sfx/pop.wav (16KB)
+assets/sfx/success.wav (124KB)
+assets/sfx/tap.wav (8KB)
+assets/sfx/unlock.wav (71KB)
+assets/sfx/whoosh.wav (31KB)
+node_modules/@expo-google-fonts/baloo-2/600SemiBold/Baloo2_600SemiBold.ttf (420KB)
+node_modules/@expo-google-fonts/baloo-2/700Bold/Baloo2_700Bold.ttf (420KB)
+node_modules/@expo-google-fonts/inter/400Regular/Inter_400Regular.ttf (342KB)
+node_modules/@expo-google-fonts/nunito/400Regular/Nunito_400Regular.ttf (132KB)
+node_modules/@expo-google-fonts/nunito/500Medium/Nunito_500Medium.ttf (132KB)
+node_modules/@expo-google-fonts/nunito/600SemiBold/Nunito_600SemiBold.ttf (132KB)
+node_modules/@expo-google-fonts/nunito/700Bold/Nunito_700Bold.ttf (132KB)
+
+› android bundles (1):
+_expo/static/js/android/index-f1fef9f9fe07dcfbb71ee83144de814e.hbc (4.6MB)
+
+› Files (1):
+metadata.json (968B)
+
+Exported: .agf/shot-bundle-check

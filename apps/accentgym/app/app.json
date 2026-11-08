@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "Accent Gym",
+    "slug": "accent-gym-pronunciation-practice-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "android": {
+      "package": "com.jeetech.accentgym",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.READ_APP_BADGE"
+      ],
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/store/adaptive-foreground.png",
+        "backgroundColor": "#050f2a"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.jeetech.accentgym",
+      "supportsTablet": false,
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Accent Gym uses the microphone so you can speak a sentence and get pronunciation feedback. Audio is turned into text on your device and is never uploaded.",
+        "NSSpeechRecognitionUsageDescription": "Accent Gym turns your speech into text on your device to score your pronunciation. Your voice is not sent to any server."
+      }
+    },
+    "scheme": "accent-gym-pronunciation-practice-ai",
+    "userInterfaceStyle": "automatic",
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "color": "#4F46E5"
+        }
+      ]
+    ],
+    "backgroundColor": "#F4F8F9",
+    "splash": {
+      "backgroundColor": "#F4F8F9"
+    },
+    "icon": "./assets/store/icon.png"
+  }
+}

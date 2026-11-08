@@ -1,0 +1,11 @@
+{
+  "_note": "Store screenshot scenes. Each id is opened with <scheme>://shot/<id> and captured on an emulator. The builder replaces these with 4-6 REAL app states (see src/screenshots.tsx).",
+  "scenes": [
+    { "id": "practice", "caption": "Speak with a clear next step" },
+    { "id": "feedback", "caption": "Know how to shape each sound" },
+    { "id": "sounds", "caption": "Train sounds that matter to you" },
+    { "id": "progress", "caption": "See your practice pay off" },
+    { "id": "review", "caption": "Keep tricky words in practice" },
+    { "id": "pro", "caption": "Choose your pace and plan" }
+  ]
+}

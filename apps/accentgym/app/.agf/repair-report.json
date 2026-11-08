@@ -1,0 +1,43 @@
+{
+  "status": "ready_for_device_retest",
+  "qa_evidence_reviewed": [
+    "ftue_1.jpg",
+    "ftue_2.jpg",
+    "ftue_3.jpg"
+  ],
+  "changes": [
+    "Replaced the result percentage and Clear praise with ordered recognition counts from the real transcript. The hero states what was checked and explains that text cannot measure pronunciation. Completion feedback celebrates saving practice, regardless of the AI estimate.",
+    "Added pure coaching evidence helpers. Identical, empty or equivalent IPA estimates do not create corrective styling or a corrective AI request. Explicit AI contrasts are labelled suggestions, with a target-versus-suggestion comparison. Every word still opens model audio and a neutral sound guide where available.",
+    "Before the three-line assessment is complete, Practice leads with the free sound check as its only primary action. The daily warm-up and session remain secondary; returning learners retain the daily sentence hero.",
+    "Extended the shared Sheet with opt-in fillContent. The transcript uses available scroll space without a fixed height or line cap; microphone and typed fallback controls stay in the safe-area footer as speech grows.",
+    "Mismatch recovery no longer repeats the target/playback card or duplicates the heard phrase. A concise prompt/first-phrase comparison sits above pinned record-again, coach-own-words and offline actions. Full transcript expansion remains available.",
+    "Stop has a distinct press-in fill, depressed edge and smaller glyph, followed by a visible checkmark and stopped status for at least 320 ms. The microphone stops immediately. A 2.5-second finalization guard preserves a retry route if the recognizer fails to finish. Growing transcript content uses a Reanimated layout transition."
+  ],
+  "validation": {
+    "typescript": "passed",
+    "validate": {
+      "tests": 141,
+      "passed": 141,
+      "failures": []
+    },
+    "journeys": {
+      "goals": 8,
+      "all_reached": true,
+      "fuzz_actions": 7500,
+      "errors": 0,
+      "invariant_violations": 0,
+      "roundtrip_failures": 0,
+      "dead_ends": 0
+    },
+    "pitfalls": "no known pitfalls",
+    "web_javascript_export": "passed with native-only modules stubbed",
+    "browser_visual_check": "unavailable: browser access host unavailable; automatic computer-use approval rejected opening Google Chrome because use of that app was not approved",
+    "native_build_run": false,
+    "on_device_visual_rerun": false
+  },
+  "remaining_verification": [
+    "Factory device QA must inspect phone-size light and dark layouts, a growing long transcript with reachable Stop, mismatch recovery, matching versus differing IPA estimates, and the pressed/stopped/processing/result motion burst.",
+    "Physical-device cold-start and frame timing remain advisory and unverified here; emulator measurements are not evidence of physical-device performance.",
+    "The app sends transcripts, not audio, to AI. Its result UI intentionally reports word recognition and labels sound comparisons as AI suggestions rather than claiming acoustic pronunciation accuracy."
+  ]
+}

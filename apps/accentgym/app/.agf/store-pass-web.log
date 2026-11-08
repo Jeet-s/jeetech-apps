@@ -1,0 +1,31 @@
+🔍 [expo-iap] Config values: horizonAppId=undefined, pinnedStore=play, amazonAppstoreKey=none, vega=auto, onside=false
+📦 [expo-iap] Using the published OpenIAP packages
+Starting Metro Bundler
+
+| (node:59775) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+Web Bundled 794ms index.js (1001 modules)
+
+› Assets (13):
+assets/sfx/error.570406c2315f3d6938f40923aec1cbd5.wav (11KB)
+assets/sfx/pop.4c2b107c7bdde7cdd7a358441828db62.wav (16KB)
+assets/sfx/success.36b7f5211d84a048a56c19dd4ef0dccf.wav (124KB)
+assets/sfx/tap.a47ccf95614ad5a338ff269596aaa7aa.wav (8KB)
+assets/sfx/unlock.69d1c986880bc12b8df9a0d0e382dfd6.wav (71KB)
+assets/sfx/whoosh.b20cd1edd8334219a054cfa597d190ec.wav (31KB)
+node_modules/@expo-google-fonts/baloo-2/600SemiBold/Baloo2_600SemiBold.61e1563819bc0ab5fc68673fc4909c99.ttf (420KB)
+node_modules/@expo-google-fonts/baloo-2/700Bold/Baloo2_700Bold.f57ab981c1dec25a04bea3cce20ea18c.ttf (420KB)
+node_modules/@expo-google-fonts/inter/400Regular/Inter_400Regular.51b6ad87261f18b6433ec52871ddfabc.ttf (342KB)
+node_modules/@expo-google-fonts/nunito/400Regular/Nunito_400Regular.f04f0e9ff969fd52a75deade3a9761cd.ttf (132KB)
+node_modules/@expo-google-fonts/nunito/500Medium/Nunito_500Medium.04058d9f3583d30ece037e060c5b9721.ttf (132KB)
+node_modules/@expo-google-fonts/nunito/600SemiBold/Nunito_600SemiBold.b1364260246b29fd9393a1a071f3af61.ttf (132KB)
+node_modules/@expo-google-fonts/nunito/700Bold/Nunito_700Bold.c133c0b8cd169e7798d0cd239477cf32.ttf (132KB)
+
+› web bundles (1):
+_expo/static/js/web/index-eb993191f161435feb3e1d61820f8313.js (1.9MB)
+
+› Files (2):
+index.html (1.2KB)
+metadata.json (49B)
+
+Exported: .agf/shot-web-check

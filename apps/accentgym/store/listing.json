@@ -1,0 +1,34 @@
+{
+  "aso": {
+    "primary": "pronunciation practice",
+    "problems": [],
+    "secondary": [
+      "pronunciation practice",
+      "minimal pairs practice",
+      "pronunciation checker",
+      "accent training",
+      "english pronunciation practice app"
+    ]
+  },
+  "title": "Accent Gym: Pronunciation",
+  "category": "Education",
+  "keywords": [
+    "pronunciation practice",
+    "accent training",
+    "pronunciation checker",
+    "English speaking practice",
+    "English pronunciation",
+    "speaking exercises"
+  ],
+  "release_notes": "Initial release with speaking exercises, transcript-based AI guidance, optional email-code sign-in and cloud backup, reminders, and paid ad removal. Report concerns directly from any AI response.",
+  "content_rating": "Everyone",
+  "full_description": "Build an English pronunciation practice habit with speaking exercises and AI-generated guidance. Say your answer, review the recognized text and explore suggestions for your next attempt. Start using the core experience without creating an account.\n\nPRACTISE SPEAKING, STEP BY STEP\n• Answer a speaking exercise using your microphone.\n• Review the text recognized from your speech.\n• Use AI suggestions to guide your next attempt.\n• Return to accent training with reminders you choose to enable.\n\nUNDERSTAND THE FEEDBACK\nLooking for a pronunciation checker? Understand what this version checks: your device turns speech into text, and AI guidance uses that transcript. It does not directly assess your recorded voice or measure individual speech sounds. Speech recognition can miss words, and AI suggestions can be inaccurate.\n\nUse pronunciation practice as a chance to speak, review and try again. Feedback is a learning aid, not an official language assessment or a guarantee of clearer speech. This is an educational tool, not speech therapy or medical advice.\n\nFREE ACCESS AND PAID OPTIONS\n• Try the core speaking experience without signing in.\n• The free version shows ads.\n• Pro removes ads. A separate Remove Ads purchase is also available.\n• Review the price, billing period and included benefits before purchasing. Manage subscriptions through your store account.\n\nYOUR SPEECH AND DATA\nThe microphone is used only while you answer a speaking exercise. Speech is converted to text on your device; audio is never uploaded, stored or shared. AI features need an internet connection: the text you submit goes through our server to Anthropic for analysis and is not used for training.\n\nYour entries stay on your device unless you choose optional cloud backup or sync. Sign in with an email code to back up your own entries. You can request account and associated server-data deletion in Settings → Account or through the web deletion page linked in the privacy policy.\n\nThe app collects anonymous, minimal usage analytics to improve the experience. The ad provider also collects advertising and diagnostic data. With notification permission, a device push token is registered with our server for reminders and updates. Every AI response includes a report control so you can flag a concern.\n\nMake room for pronunciation practice today: open an exercise, speak and review your next step.",
+  "screenshots_plan": [
+    "Start a speaking exercise",
+    "Review your recognized words",
+    "Explore AI learning suggestions",
+    "Choose your practice reminders",
+    "Back up entries with sign-in"
+  ],
+  "short_description": "Pronunciation practice and accent training with speaking exercises and AI tips"
+}

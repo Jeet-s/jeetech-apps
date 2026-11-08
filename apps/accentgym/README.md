@@ -1,7 +1,9 @@
-# JeeTech accentgym
+# Accent Gym: Pronunciation
 
-Play package `com.jeetech.accentgym`. Built and maintained by the AI App Factory.
+Pronunciation practice and accent training with speaking exercises and AI tips
 
-- `docs/` — GitHub Pages: landing page, privacy policy, terms
-- `app/` — app source as shipped
-- `store/` — store listing + graphics
+- Google Play: https://play.google.com/store/apps/details?id=com.jeetech.accentgym
+- Privacy policy: https://jeet-s.github.io/jeetech-apps/accentgym/privacy.html
+- Current version: 1.0.0
+
+`app/` is the Expo (React Native) source as shipped; `store/` holds the listing and graphics.
