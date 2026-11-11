@@ -1,0 +1,54 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.3
+2 info using node@v22.20.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/private/tmp/accentgym-onboarding-renderer/.npmrc
+5 silly config load:file:/Users/jagjeetsingh/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install react-test-renderer@19.3.0 react@19.3.0
+8 verbose argv "install" "--prefix" "/private/tmp/accentgym-onboarding-renderer" "--cache" ".npm-cache" "--no-package-lock" "--ignore-scripts" "--no-audit" "--no-fund" "react-test-renderer@19.3.0" "react@19.3.0"
+9 verbose logfile logs-max:10 dir:/Users/jagjeetsingh/ai-app-factory/.workspaces/28eb186c-d101-4fbd-9a80-7e00591a02fc/.npm-cache/_logs/2026-11-10T08_39_11_196Z-
+10 verbose logfile /Users/jagjeetsingh/ai-app-factory/.workspaces/28eb186c-d101-4fbd-9a80-7e00591a02fc/.npm-cache/_logs/2026-11-10T08_39_11_196Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly fetch manifest react-test-renderer@19.3.0
+16 silly packumentCache full:https://registry.npmjs.org/react-test-renderer cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/react-test-renderer 1036ms (cache miss)
+18 silly packumentCache full:https://registry.npmjs.org/react-test-renderer set size:undefined disposed:false
+19 silly fetch manifest react@19.3.0
+20 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/react 686ms (cache updated)
+22 silly packumentCache full:https://registry.npmjs.org/react set size:undefined disposed:false
+23 silly placeDep ROOT react@19.3.0 OK for:  want: 19.3.0
+24 silly placeDep ROOT react-test-renderer@19.3.0 OK for:  want: 19.3.0
+25 silly fetch manifest react-is@^19.3.0
+26 silly packumentCache full:https://registry.npmjs.org/react-is cache-miss
+27 silly fetch manifest scheduler@^0.28.0
+28 silly packumentCache full:https://registry.npmjs.org/scheduler cache-miss
+29 http fetch GET 200 https://registry.npmjs.org/scheduler 869ms (cache updated)
+30 silly packumentCache full:https://registry.npmjs.org/scheduler set size:undefined disposed:false
+31 http fetch GET 200 https://registry.npmjs.org/react-is 1774ms (cache updated)
+32 silly packumentCache full:https://registry.npmjs.org/react-is set size:undefined disposed:false
+33 silly placeDep ROOT react-is@19.3.1 OK for: react-test-renderer@19.3.0 want: ^19.3.0
+34 silly placeDep ROOT scheduler@0.28.0 OK for: react-test-renderer@19.3.0 want: ^0.28.0
+35 silly reify moves {}
+36 http cache scheduler@https://registry.npmjs.org/scheduler/-/scheduler-0.28.0.tgz 0ms (cache hit)
+37 http cache react-is@https://registry.npmjs.org/react-is/-/react-is-19.3.1.tgz 0ms (cache hit)
+38 http cache react@https://registry.npmjs.org/react/-/react-19.3.0.tgz 1ms (cache hit)
+39 http cache react-test-renderer@https://registry.npmjs.org/react-test-renderer/-/react-test-renderer-19.3.0.tgz 1ms (cache hit)
+40 silly tarball no local data for react-is@https://registry.npmjs.org/react-is/-/react-is-19.3.1.tgz. Extracting by manifest.
+41 silly tarball no local data for react-test-renderer@https://registry.npmjs.org/react-test-renderer/-/react-test-renderer-19.3.0.tgz. Extracting by manifest.
+42 http fetch GET 200 https://registry.npmjs.org/react-is/-/react-is-19.3.1.tgz 98ms (cache miss)
+43 http fetch GET 200 https://registry.npmjs.org/react-test-renderer/-/react-test-renderer-19.3.0.tgz 179ms (cache miss)
+44 silly ADD node_modules/scheduler
+45 silly ADD node_modules/react-is
+46 silly ADD node_modules/react-test-renderer
+47 silly ADD node_modules/react
+48 verbose cwd /Users/jagjeetsingh/ai-app-factory/.workspaces/28eb186c-d101-4fbd-9a80-7e00591a02fc
+49 verbose os Darwin 27.0.0
+50 verbose node v22.20.0
+51 verbose npm  v10.9.3
+52 verbose exit 0
+53 info ok

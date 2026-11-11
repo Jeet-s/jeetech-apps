@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 import {
@@ -10,8 +10,8 @@ import {
   Icon,
   Segmented,
   feedback,
+  gradient,
   palette,
-  radius,
   space,
   tones,
   type,
@@ -21,7 +21,7 @@ import { SpeakSheet, type SpeakMode } from "./SpeakSheet";
 import { store } from "../modules/store";
 import { analytics } from "../modules/analytics";
 import { gymStore, useGym } from "../core/data";
-import { chooseAccent, chooseLanguage, completeDiagnosis, finishOnboarding, soundReport } from "../core/state";
+import { completeDiagnosis, finishOnboarding, soundReport } from "../core/state";
 import { L1_NAME, SOUND_BY_ID, pairsForSound } from "../core/sounds";
 import { diagnosticsFor } from "../core/sentences";
 import { soundLabel } from "../core/accent";
@@ -36,29 +36,37 @@ const LANGS: { id: L1; label: string; flag: string }[] = [
 ];
 
 /**
- * First run → the Accent Gym "aha" in a few tight screens: what it does (with the
- * price shown up front, no card) → pick your mother tongue + target accent → a
- * optional sound check in Settings → your focus sounds, named. Skippable; ends on the
- * Practice tab with the mic one tap away.
+ * One skippable setup screen, then a practice line one tap away. The optional
+ * three-line sound check and its report remain available from Practice/Settings.
  */
 export function OnboardingScreen({ onDone, onPro, assessmentOnly = false }: { assessmentOnly?: boolean; onDone: () => void; onPro?: (from: string) => void }) {
   const gym = useGym();
-  const [step, setStep] = useState(assessmentOnly ? gym.diagnostics.length >= 3 ? 3 : 2 : 0);
-  const [lang, setLang] = useState<L1>(!assessmentOnly && gym.profile.nativeLanguage === "other" ? "hi" : gym.profile.nativeLanguage);
+  const [step, setStep] = useState(assessmentOnly ? gym.diagnostics.length >= 3 ? 3 : 2 : 1);
+  const [lang, setLang] = useState<L1>(gym.profile.nativeLanguage);
   const [accent, setAccent] = useState<Accent>(gym.profile.targetAccent);
   const [mode, setMode] = useState<SpeakMode | null>(null);
   const [speaking, setSpeaking] = useState(false);
+  const finished = useRef(false);
   const today = dateKey(new Date());
 
   const diagnostics = useMemo(() => diagnosticsFor(lang), [lang]);
   const doneCount = gym.diagnostics.length;
   const report = soundReport(gym);
 
-  const finish = (withPlan: boolean) => {
+  // Track a viewed step, including the first screen before any interaction.
+  // Optional assessments are screen views, not new-user onboarding steps.
+  useEffect(() => {
+    if (assessmentOnly) analytics.track("screen_view", { screen: step === 2 ? "sound_check" : "sound_plan" });
+    else analytics.track("onboarding_step", { step: 1 });
+  }, [assessmentOnly, step]);
+
+  const finish = (withPlan: boolean, useChoices = false) => {
+    if (finished.current) return;
+    finished.current = true;
     if (withPlan && gym.diagnostics.length >= 3 && !gym.reportShown) {
       gymStore.set((s) => completeDiagnosis(s, today));
     }
-    gymStore.set((s) => finishOnboarding(s));
+    gymStore.set((s) => finishOnboarding(s, useChoices ? { nativeLanguage: lang, targetAccent: accent } : undefined));
     feedback("success", "success");
     store.set({ onboarded: true });
     if (!assessmentOnly) analytics.track("onboarding_done", { diagnosed: gym.diagnostics.length });
@@ -66,83 +74,47 @@ export function OnboardingScreen({ onDone, onPro, assessmentOnly = false }: { as
   };
 
   const goto = (n: number) => {
-    analytics.track("onboarding_step", { step: n });
     setStep(n);
   };
 
   const TopDots = (
-    <View style={styles.dots} accessibilityLabel={`Step ${assessmentOnly ? step - 1 : step + 1} of 2`}>
-      {(assessmentOnly ? [2, 3] : [0, 1]).map((i) => (
+    <View style={styles.dots} accessibilityLabel={`Step ${step - 1} of 2`}>
+      {[2, 3].map((i) => (
         <View key={i} style={[styles.dot, i === step && styles.dotOn, i < step && styles.dotDone]} />
       ))}
     </View>
   );
 
-  if (step === 0) {
-    return (
-      <FooterScreen
-        compact
-        top={TopDots}
-        footer={
-          <>
-            <Button label="Start — it's free" size="lg" icon="mic" onPress={() => goto(1)} />
-            <Button label="Skip setup" variant="ghost" sound={null} onPress={() => finish(false)} />
-          </>
-        }
-      >
-        <View style={{ gap: space.lg }}>
-          <View style={styles.badge}>
-            <Icon name="mic" size={46} color={palette.onPrimary} />
-          </View>
-          <Text style={[type.display, styles.center]}>Speak. Find your{"\n"}next sound to fix.</Text>
-          <Text style={[type.body, styles.center, { color: palette.inkSoft }]}>
-            Record a line, compare what was heard, and get AI guidance for each sound. Clarity scores are estimates based on the transcript.
-          </Text>
-          <Card>
-            <View style={styles.promise}><Icon name="target" size={18} color={palette.primary} /><Text style={[type.body, { flex: 1, flexShrink: 1 }]}>A sound plan tailored to your first language</Text></View>
-            <View style={styles.promise}><Icon name="play" size={18} color={palette.primary} /><Text style={[type.body, { flex: 1, flexShrink: 1 }]}>Hear the model, replay your take</Text></View>
-            <View style={styles.promise}><Icon name="flame" size={18} color={palette.primary} /><Text style={[type.body, { flex: 1, flexShrink: 1 }]}>5-minute daily sessions with a streak</Text></View>
-          </Card>
-          <Card accent={palette.success}>
-            <Text style={type.bodyStrong}>Fair pricing, shown up front</Text>
-            <Text style={type.caption}>
-              Free forever: 5 scored lines a day, every drill and model. Pro is $6.99/mo or $52.99/yr with a 7-day free
-              trial for eligible store accounts. The free tier needs no card. Store trials renew unless cancelled.
-            </Text>
-          </Card>
-        </View>
-      </FooterScreen>
-    );
-  }
-
   if (step === 1) {
     return (
       <FooterScreen
         compact
-        top={TopDots}
+        top={<Text style={type.caption}>Quick setup · no account needed</Text>}
         footer={
           <>
-          <Button
-            label="Start practising"
-            size="lg"
-            onPress={() => {
-              gymStore.set((s) => chooseAccent(chooseLanguage(s, lang), accent));
-              finish(false);
-            }}
-          />
-          <Button label="Use defaults and practise" variant="ghost" onPress={() => finish(false)} />
+            <Button
+              label="Start practising"
+              size="lg"
+              icon="mic"
+              onPress={() => finish(false, true)}
+            />
+            <Button label="Skip setup" variant="ghost" onPress={() => finish(false)} />
           </>
         }
       >
-        <View style={{ gap: space.lg }}>
-          <Text style={type.title}>Your mother tongue</Text>
-          <Text style={[type.caption, { marginTop: -space.sm }]}>We build a plan around the sounds your first language makes tricky.</Text>
+        <View style={{ gap: space.md }}>
+          <HeroCard overline="WELCOME TO ACCENT GYM" value="One line to start" caption="Listen, speak, get sound guidance."
+            style={{ padding: space.md }}>
+            <Text style={[type.caption, { color: gradient.onHeroSoft }]}>5 free AI checks a day. Listen & say also works offline. Scores are transcript-based estimates.</Text>
+          </HeroCard>
+          <Text style={type.heading}>Your first language</Text>
+          <Text style={type.caption}>Choose for a tailored starter sound plan.</Text>
           <View style={styles.chips}>
             {LANGS.map((l) => (
               <Chip key={l.id} label={`${l.flag}  ${l.label}`} selected={lang === l.id} onPress={() => setLang(l.id)} />
             ))}
           </View>
-          <Text style={[type.title, { marginTop: space.md }]}>Target accent</Text>
+          <Text style={type.heading}>Target accent</Text>
           <Segmented
             value={accent}
             onChange={setAccent}
@@ -151,7 +123,7 @@ export function OnboardingScreen({ onDone, onPro, assessmentOnly = false }: { as
               { value: "uk", label: "British" },
             ]}
           />
-          <Text style={type.caption}>Change your accent anytime in Settings — lines re-score to the accent you pick.</Text>
+          <Text style={type.caption}>Next: practise one short line. The full sound check is optional.</Text>
         </View>
       </FooterScreen>
     );
@@ -263,13 +235,10 @@ function ReportStep({ lang, report }: { lang: L1; report: ReturnType<typeof soun
 }
 
 const styles = StyleSheet.create({
-  center: { textAlign: "center" },
   dots: { flexDirection: "row", gap: 6, alignSelf: "center" },
   dot: { width: 8, height: 8, borderRadius: 4, backgroundColor: palette.border },
   dotOn: { width: 22, backgroundColor: palette.primary },
   dotDone: { backgroundColor: palette.primary },
-  badge: { alignSelf: "center", width: 104, height: 104, borderRadius: radius.xl, backgroundColor: palette.primary, alignItems: "center", justifyContent: "center" },
-  promise: { flexDirection: "row", alignItems: "center", gap: space.sm, paddingVertical: space.xs },
   chips: { flexDirection: "row", flexWrap: "wrap", gap: space.sm },
   checkRow: { flexDirection: "row", alignItems: "center", gap: space.sm, marginBottom: space.sm },
   num: { width: 28, height: 28, borderRadius: 14, backgroundColor: palette.primary, alignItems: "center", justifyContent: "center" },

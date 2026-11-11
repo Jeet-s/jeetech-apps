@@ -167,32 +167,26 @@ function PracticeBody({
   const risk = atRisk(gym.streak, today);
   const sessionFrac = session.items.length ? sessionIdx / session.items.length : 0;
   const needsAssessment = gym.diagnostics.length < 3 && !!onAssessment;
+  const practisedToday = gym.streak.lastActiveDate === today;
 
   return (
     <Screen title="Practice" subtitle="Accent Gym" bottomInset={bottomInset}>
       <HeroCard
-        overline={needsAssessment ? "Start here · your sound plan" : "Your warm-up · sound coach"}
-        value={needsAssessment ? "3 focus sounds" : weakest && SOUND_BY_ID[weakest] ? soundLabel(weakest) : "Let's speak"}
-        status={{ label: needsAssessment ? "Free · 3 short lines" : gym.guidedPractice?.date === today ? "Practice saved today" : "Listen. Feel. Speak.", tone: "primary" }}
-        right={needsAssessment ? <ProgressRing value={gym.diagnostics.length / 3} size={64} stroke={6} label={`${gym.diagnostics.length}/3`} color={gradient.onHero} track={gradient.pill} labelColor={gradient.onHero} /> : weakest ? <View style={styles.art}><MouthIllustration soundId={weakest} size={96} /></View> : undefined}
+        overline="Your warm-up · sound coach"
+        value={weakest && SOUND_BY_ID[weakest] ? soundLabel(weakest) : "Let's speak"}
+        status={{ label: practisedToday ? "Practice saved today" : "One line is all it takes", tone: "primary" }}
+        right={weakest ? <View style={styles.art}><MouthIllustration soundId={weakest} size={96} /></View> : undefined}
         style={{ padding: space.lg, gap: space.md }}
       >
-        {needsAssessment ? <>
-          <Text style={[type.heading, { color: gradient.onHero }]}>Find your starting point.</Text>
-          <Text style={[type.body, { color: gradient.onHeroSoft }]}>Say three lines. Get a suggested sound plan for your first language, with a drill for each focus sound.</Text>
-          <Button label={gym.diagnostics.length ? "Continue my sound check" : "Find my 3 focus sounds"} size="lg" icon="mic" onPress={onAssessment} />
-        </> : todaysSentence ? <>
+        {todaysSentence ? <>
           <FocusSentence text={todaysSentence.text} soundId={weakest} style={{ color: gradient.onHero }} highlight={gradient.onHero} />
           {weakest && SOUND_BY_ID[weakest] ? <Text style={[type.label, { color: gradient.onHeroSoft }]}>{SOUND_BY_ID[weakest].mouthTip}</Text> : null}
           <Button label="Tap to speak" size="lg" icon="mic" onPress={onLine} />
         </> : null}
+        <Text style={[type.caption, { color: gradient.onHeroSoft, minHeight: 40 }]}>
+          {practisedToday ? "Nice work today! Come back tomorrow for one line to grow your streak." : "Listen, then say this line. Use Type instead for offline listen & say."}
+        </Text>
       </HeroCard>
-
-      {needsAssessment && todaysSentence ? <Card style={{ gap: space.sm }}>
-        <Text style={type.heading}>Just want to warm up?</Text>
-        <Text style={type.body}>{todaysSentence.text}</Text>
-        <Button label="Practise this line" variant="secondary" icon="mic" onPress={onLine} />
-      </Card> : null}
 
       <View style={styles.rowBetween}>
         <View style={[styles.rowBetween, { flexShrink: 1 }]}><Icon name="flame" size={22} color={risk ? palette.warning : palette.primary} /><Text style={[type.label, { flexShrink: 1 }]}>{streak > 0 ? `${streak}-day streak${risk ? " · keep it going" : ""}` : "One line starts your streak"}</Text></View>
@@ -222,11 +216,11 @@ function PracticeBody({
         <Text style={[type.caption, { marginTop: space.sm }]}>Warm up with the line above. Your session is a separate set of due words and sound drills.</Text>
       </Card>
 
-      {onAssessment && !needsAssessment ? <View style={{ gap: space.xs }}>
+      {onAssessment ? <Card style={{ gap: space.xs }}>
         <Text style={type.heading}>{gym.diagnostics.length >= 3 ? "Your personal sound plan" : "Which 3 sounds should you work on?"}</Text>
-        <Text style={type.caption}>{gym.diagnostics.length >= 3 ? "See your priority sounds and a listening drill for each." : "A free, three-line sound check builds your plan."}</Text>
-        <Button label={gym.diagnostics.length >= 3 ? "Open my 3-sound plan" : gym.diagnostics.length ? "Continue my sound check" : "Find my 3 focus sounds"} variant="ghost" icon="target" onPress={onAssessment} />
-      </View> : null}
+        <Text style={type.caption}>{needsAssessment ? "Optional: a free, three-line sound check tailors your plan to your first language." : "See your priority sounds and a listening drill for each."}</Text>
+        <Button label={gym.diagnostics.length >= 3 ? "Open my 3-sound plan" : gym.diagnostics.length ? "Continue my sound check" : "Find my 3 focus sounds"} variant="secondary" icon="target" onPress={onAssessment} />
+      </Card> : null}
 
       {!pro ? <View style={{ gap: space.xs }}>
         <Text style={type.caption}>5 free AI checks daily. Model audio and listening drills stay unlimited. Pro subscriptions include 134 AI checks a day.</Text>

@@ -3,6 +3,12 @@
   "admob": {
     "appId": "ca-app-pub-5054561222360217~1257352634",
     "banner": "ca-app-pub-5054561222360217/1971668505",
+    "verify": {
+      "linked": true,
+      "status": "Requires review",
+      "checked_at": "2026-11-10T08:30:25.861Z",
+      "website_set": true
+    },
     "rewarded": "ca-app-pub-5054561222360217/2373179094",
     "interstitial": "ca-app-pub-5054561222360217/6312424104",
     "test": false

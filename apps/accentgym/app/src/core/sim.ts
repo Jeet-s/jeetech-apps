@@ -10,13 +10,13 @@ import {
   type AppState,
   beginTrial,
   buy,
-  chooseLanguage,
   completeDiagnosis,
   completeDrill,
   completeGuidedPractice,
   completeSession,
   diagnosticsDone,
   emptyState,
+  finishOnboarding,
   linkAccount,
   pro,
   recordCustom,
@@ -25,7 +25,7 @@ import {
   restoreFromBackup,
   watchRewarded,
 } from "./state";
-import type { L1 } from "./types";
+import type { Accent, L1 } from "./types";
 import { addDays, noonMs } from "./dates";
 import { PRO_DAILY, MAX_BONUS } from "./quota";
 import { WEEKLY_FREEZES } from "./streak";
@@ -55,11 +55,15 @@ interface SimState {
   app: AppState;
   today: string;
   improved: boolean; // a target sound rose on a retry (F2 success)
+  setup?: { nativeLanguage: L1; targetAccent: Accent }; // unsaved setup choices
   cloud?: { accountId: string; snapshot: AppState };
 }
 
 type Action =
   | { t: "set_language"; l1: L1 }
+  | { t: "set_accent"; accent: Accent }
+  | { t: "finish_setup" }
+  | { t: "skip_setup" }
   | { t: "record_diagnostic" }
   | { t: "view_report" }
   | { t: "record_practice" }
@@ -108,8 +112,14 @@ export const sim: AppSim<SimState, Action> = {
     const isPro = pro(app, now(t));
     const A: Action[] = [];
 
-    if (app.profile.nativeLanguage === "other" && !app.onboarded) {
-      A.push({ t: "set_language", l1: "hi" }, { t: "set_language", l1: "es" });
+    if (!app.onboarded) {
+      const choices = s.setup ?? app.profile;
+      for (const l1 of ["hi", "es", "ar", "other"] as const) {
+        if (l1 !== choices.nativeLanguage) A.push({ t: "set_language", l1 });
+      }
+      A.push({ t: "set_accent", accent: choices.targetAccent === "us" ? "uk" : "us" });
+      A.push({ t: "finish_setup" }, { t: "skip_setup" });
+      return A;
     }
     if (app.diagnostics.length < 3) A.push({ t: "record_diagnostic" });
     if (diagnosticsDone(app) && !app.reportShown) A.push({ t: "view_report" });
@@ -137,7 +147,16 @@ export const sim: AppSim<SimState, Action> = {
     const n = now(t);
     switch (a.t) {
       case "set_language":
-        return backup({ ...s, app: chooseLanguage(s.app, a.l1) });
+        return { ...s, setup: { targetAccent: (s.setup ?? s.app.profile).targetAccent, nativeLanguage: a.l1 } };
+
+      case "set_accent":
+        return { ...s, setup: { nativeLanguage: (s.setup ?? s.app.profile).nativeLanguage, targetAccent: a.accent } };
+
+      case "finish_setup":
+      case "skip_setup": {
+        const { setup, ...rest } = s;
+        return backup({ ...rest, app: finishOnboarding(s.app, a.t === "finish_setup" ? setup ?? s.app.profile : undefined) });
+      }
 
       case "record_diagnostic": {
         const idx = s.app.diagnostics.length;
@@ -218,6 +237,7 @@ export const sim: AppSim<SimState, Action> = {
   },
 
   goals: [
+    { id: "quick_setup", name: "Finish or skip setup without recording, signing in or buying", done: s => s.app.onboarded },
     { id: "offline_practice", name: "Complete listen-and-say practice without microphone or AI", done: s => !!s.app.guidedPractice },
     {
       id: "sound_report",

@@ -445,6 +445,25 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:304027183289:android:6423032c87515ad5dbd368",
+        "android_client_info": {
+          "package_name": "com.jeetech.nihongodojo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBPuqP28GFcM-LtGl5g3yjHl0DNc0y6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:304027183289:android:83dddc73b59498c6dbd368",
         "android_client_info": {
           "package_name": "com.jeetech.podium"

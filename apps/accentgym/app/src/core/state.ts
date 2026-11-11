@@ -110,8 +110,10 @@ export function chooseAccent(s: AppState, accent: Accent): AppState {
   return { ...s, profile: setAccent(s.profile, accent) };
 }
 
-export function finishOnboarding(s: AppState): AppState {
-  return { ...s, onboarded: true };
+/** Finish quick setup, or skip with the existing profile and progress intact. */
+export function finishOnboarding(s: AppState, choices?: { nativeLanguage: L1; targetAccent: Accent }): AppState {
+  const configured = choices ? chooseAccent(chooseLanguage(s, choices.nativeLanguage), choices.targetAccent) : s;
+  return { ...configured, onboarded: true };
 }
 
 // ── Scoring pipeline (shared by diagnostics, practice, custom) ────────────────

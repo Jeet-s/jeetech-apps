@@ -25,7 +25,7 @@ import {
   statusFor,
 } from "../src/core/scoring";
 import { L1_TROUBLE, isSoundId, pairsForSound, revealsL1, SOUNDS } from "../src/core/sounds";
-import { diagnosticsFor, practiceFor, SENTENCE_BY_ID } from "../src/core/sentences";
+import { diagnosticsFor, practiceFor, sentenceForSound, SENTENCE_BY_ID } from "../src/core/sentences";
 import { accentAffectedSounds, ipaForSound, rulesFor } from "../src/core/accent";
 import { buildPlan, buildReport, reorderPlan, worstSounds } from "../src/core/soundplan";
 import { MASTERED_AT, masteredCount, recordSound, recordSounds, trendWindow } from "../src/core/mastery";
@@ -57,6 +57,7 @@ import {
   migrateState,
   completeSession,
   emptyState,
+  finishOnboarding,
   linkAccount,
   pro,
   recordCustom,
@@ -520,6 +521,7 @@ test("persistence", "a scripted run of all core actions never breaks an invarian
   let s = sim.init();
   const script: Parameters<typeof sim.apply>[1][] = [
     { t: "set_language", l1: "hi" },
+    { t: "finish_setup" },
     { t: "record_diagnostic" },
     { t: "record_diagnostic" },
     { t: "record_diagnostic" },
@@ -604,7 +606,7 @@ test("persistence", "version 1 migration preserves existing scores, words, purch
   eq(migrateState(null, T), fresh());
 });
 test("persistence", "guided practice survives sim save and restore", () => {
-  const s = sim.apply(sim.init(), { t: "guided_practice" });
+  const s = sim.apply(sim.apply(sim.init(), { t: "skip_setup" }), { t: "guided_practice" });
   eq(sim.deserialize(sim.serialize(s)), s); ok(!!s.app.guidedPractice); eq(sim.invariants(s), []);
 });
 test("backup merge", "newer offline practice survives switching accounts", () => {
@@ -683,6 +685,50 @@ test("restore recovery", "native error spellings reconnect rather than repeat a 
   ok(restoreFailure({ code: "E_SERVICE_UNAVAILABLE" }).retry);
   ok(restoreFailure({ code: "E_NOT_PREPARED" }).retry);
   ok(restoreFailure({ code: "E_ITEM_NOT_OWNED" }).message.includes("No previous purchases"));
+});
+
+test("quick onboarding", "every language/accent choice opens a free line without diagnostics or an account", () => {
+  for (const nativeLanguage of ["hi", "es", "ar", "other"] as const) {
+    for (const targetAccent of ["us", "uk"] as const) {
+      const before = emptyState(T);
+      const s = finishOnboarding(before, { nativeLanguage, targetAccent });
+      ok(s.onboarded); eq(s.profile.nativeLanguage, nativeLanguage); eq(s.profile.targetAccent, targetAccent);
+      ok(!!sentenceForSound(s.plan[0], false));
+      eq(s.plan, buildPlan([], nativeLanguage)); eq(s.diagnostics, []); eq(s.attempts, []);
+      eq(s.quota, before.quota); eq(s.entitlement, before.entitlement); eq(s.profile.accountId, undefined);
+      ok(!before.onboarded); eq(before.profile.nativeLanguage, "other");
+    }
+  }
+});
+test("quick onboarding", "skip keeps the saved profile, words, purchases and partial sound check", () => {
+  const old = buy(saveCustomText(fresh(), "water", T), "lifetime", nowT);
+  const d = diagnosticsFor("hi")[0];
+  const before = recordDiagnostic(old, mockScore(d, "us", "weak"), { accent: "us", timestamp: nowT, sentenceId: d.id }, T).state;
+  eq(finishOnboarding(before), { ...before, onboarded: true });
+  eq(finishOnboarding(finishOnboarding(before)), finishOnboarding(before));
+  eq(migrateState(JSON.parse(JSON.stringify(finishOnboarding(before))), T), finishOnboarding(before));
+});
+test("quick onboarding", "journeys keep core actions behind setup and skip discards draft choices", () => {
+  const start = sim.init();
+  ok(!sim.actions(start).some(a => a.t === "record_diagnostic" || a.t === "record_practice"));
+  let s = sim.apply(start, { t: "set_language", l1: "es" });
+  s = sim.apply(s, { t: "set_accent", accent: "uk" });
+  eq(s.app, start.app);
+  const skipped = sim.apply(s, { t: "skip_setup" });
+  eq(skipped.app, finishOnboarding(start.app)); eq(skipped.setup, undefined);
+  const finished = sim.apply(s, { t: "finish_setup" });
+  eq(finished.app.profile.nativeLanguage, "es"); eq(finished.app.profile.targetAccent, "uk");
+  eq(finished.setup, undefined); ok(sim.actions(finished).some(a => a.t === "record_practice"));
+});
+test("quick onboarding", "skip reaches saved offline practice and a return streak without a sound check", () => {
+  let s = sim.apply(sim.init(), { t: "skip_setup" });
+  s = sim.apply(s, { t: "guided_practice" });
+  eq(s.app.streak.current, 1); eq(s.app.streak.lastActiveDate, s.today); eq(s.app.diagnostics.length, 0);
+  s = sim.deserialize(sim.serialize(s));
+  s = sim.apply(s, { t: "next_day" });
+  ok(atRisk(s.app.streak, s.today));
+  s = sim.apply(s, { t: "guided_practice" });
+  eq(s.app.streak.current, 2); eq(s.app.quota.scoredUsed, 0); eq(sim.invariants(s), []);
 });
 
 const failures = results.filter((r) => !r.ok).map((r) => `${r.name}: ${r.why}`);
