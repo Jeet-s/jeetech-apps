@@ -89,12 +89,14 @@ export function SpeakSheet({
   onClose,
   onScored,
   onPro,
+  startWithoutMic = false,
 }: {
   visible: boolean;
   mode: SpeakMode | null;
   onClose: () => void;
   onScored?: (attempt: Attempt | undefined) => void;
   onPro?: (from: string) => void;
+  startWithoutMic?: boolean;
 }) {
   const gym = useGym();
   const accent = gym.profile.targetAccent;
@@ -135,11 +137,11 @@ export function SpeakSheet({
       setExpandedHeard(false);
       setGuidedSaved(false);
       setPhraseIndex(0);
-      setHeard("");
+      setHeard(startWithoutMic ? mode.text : "");
       setScoreError("");
       setAdUnavailable(false);
       setRewardStatus("");
-      setPhase(gated ? "blocked" : "ready");
+      setPhase(startWithoutMic ? "text_done" : gated ? "blocked" : "ready");
       setAttempt(undefined);
       setTyped("");
       setTyping(false);
@@ -149,7 +151,7 @@ export function SpeakSheet({
       dict.reset();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [visible, mode?.kind, (mode as { sentenceId?: string })?.sentenceId, (mode as { text?: string })?.text]);
+  }, [visible, mode?.kind, (mode as { sentenceId?: string })?.sentenceId, (mode as { text?: string })?.text, startWithoutMic]);
 
   const score = useCallback(
     async (transcript: string, ownWords = false, part = 0) => {
@@ -377,6 +379,7 @@ export function SpeakSheet({
       </View> : recording && !typing ? <View style={{ gap: space.xs, paddingTop: space.xs }}>
         <RecordControls dict={dict} phase={phase} onStart={startMic}
           onStop={() => { stopAckUntil.current = Date.now() + 320; setPhase("stopping"); dict.stop(); }} />
+        {phase === "ready" ? <Button label="Listen & say without a mic" variant="secondary" icon="play" onPress={() => openGuidedPractice()} /> : null}
         <Button label="Type instead" variant="ghost" size="sm" disabled={phase === "stopping"} onPress={() => { dict.reset(); setTyping(true); setPhase("ready"); }} />
       </View> : typing && phase === "ready" ? <View style={{ gap: space.sm }}>
         <Button label="Start listen & say" icon="play" disabled={!!validateCustomText(typed)} onPress={submitTyped} />

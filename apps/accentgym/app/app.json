@@ -2,11 +2,11 @@
   "expo": {
     "name": "Accent Gym",
     "slug": "accent-gym-pronunciation-practice-ai",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "android": {
       "package": "com.jeetech.accentgym",
-      "versionCode": 2,
+      "versionCode": 3,
       "permissions": [
         "android.permission.POST_NOTIFICATIONS",
         "android.permission.RECORD_AUDIO"

@@ -51,6 +51,7 @@ export function PracticeScreen({ bottomInset, onPro, onAssessment }: { bottomIns
 
   const [mode, setMode] = useState<SpeakMode | null>(null);
   const [speaking, setSpeaking] = useState(false);
+  const [withoutMic, setWithoutMic] = useState(false);
   const [sessionOn, setSessionOn] = useState(false);
 
   const weakest = gym.plan[0];
@@ -62,8 +63,9 @@ export function PracticeScreen({ bottomInset, onPro, onAssessment }: { bottomIns
   const clarity = clarityScore([...gym.diagnostics, ...gym.attempts]);
   const clarityBand = clarity > 0 ? clarityLabel(clarity) : null;
 
-  const openLine = () => {
+  const openLine = (guided = false) => {
     if (!todaysSentence) return;
+    setWithoutMic(guided);
     setSessionOn(false);
     setMode({ kind: "practice", sentenceId: todaysSentence.id, text: todaysSentence.text, soundTags: todaysSentence.soundTags, title: "Today's line" });
     setSpeaking(true);
@@ -79,6 +81,7 @@ export function PracticeScreen({ bottomInset, onPro, onAssessment }: { bottomIns
     const start = sessionDone ? 0 : sessionIdx;
     const m = sessionModeFor(start);
     if (!m) return;
+    setWithoutMic(false);
     if (sessionDone) gymStore.set(s => ({ ...s, sessionProgress: { date: today, index: 0, total: session.items.length } }));
     setSessionOn(true);
     setMode(m);
@@ -115,7 +118,8 @@ export function PracticeScreen({ bottomInset, onPro, onAssessment }: { bottomIns
         sessionIdx={sessionIdx}
         sessionDone={sessionDone}
         bottomInset={bottomInset}
-        onLine={openLine}
+        onLine={() => openLine()}
+        onListen={() => openLine(true)}
         onSession={startSession}
         onPro={onPro}
         onAssessment={onAssessment}
@@ -123,6 +127,7 @@ export function PracticeScreen({ bottomInset, onPro, onAssessment }: { bottomIns
       <SpeakSheet
         visible={speaking}
         mode={mode}
+        startWithoutMic={withoutMic}
         onPro={onPro}
         onClose={() => { setSpeaking(false); setSessionOn(false); }}
         onScored={sessionOn ? onSessionClose : undefined}
@@ -143,6 +148,7 @@ function PracticeBody({
   sessionDone,
   bottomInset,
   onLine,
+  onListen,
   onSession,
   onPro,
   onAssessment,
@@ -158,6 +164,7 @@ function PracticeBody({
   sessionDone: boolean;
   bottomInset: number;
   onLine: () => void;
+  onListen: () => void;
   onSession: () => void;
   onPro: (from: string) => void;
   onAssessment?: () => void;
@@ -182,9 +189,10 @@ function PracticeBody({
           <FocusSentence text={todaysSentence.text} soundId={weakest} style={{ color: gradient.onHero }} highlight={gradient.onHero} />
           {weakest && SOUND_BY_ID[weakest] ? <Text style={[type.label, { color: gradient.onHeroSoft }]}>{SOUND_BY_ID[weakest].mouthTip}</Text> : null}
           <Button label="Tap to speak" size="lg" icon="mic" onPress={onLine} />
+          <Button label="Listen & say without a mic" variant="secondary" icon="play" onPress={onListen} />
         </> : null}
         <Text style={[type.caption, { color: gradient.onHeroSoft, minHeight: 40 }]}>
-          {practisedToday ? "Nice work today! Come back tomorrow for one line to grow your streak." : "Listen, then say this line. Use Type instead for offline listen & say."}
+          {practisedToday ? "Nice work today! Come back tomorrow for one line to grow your streak." : "Say this line, then save your practice to start a streak. No account needed."}
         </Text>
       </HeroCard>
 

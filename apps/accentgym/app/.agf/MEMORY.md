@@ -3,3 +3,4 @@
 - [Transcript feedback evidence](ux-scoring-evidence.md) — recognition counts and neutral matching-IPA guides replace ungrounded pronunciation grades.
 - [Store screenshot quality pass](quality-pass.md) — five real scenes: practice/plan/word correction/review/Pro; approved sources unchanged; light/dark render smoke + all gates pass; native visual review pending (browser host unavailable).
 - [Quick onboarding maintenance](onboarding-maintenance.md) — one skippable setup screen, primary one-line practice, accurate viewed-step telemetry and a saved-streak return nudge; existing data and optional sound check preserved.
+- [Direct offline activation](activation-maintenance.md) — defer native ad/billing initialization until setup ends; expose the displayed line's existing listen-and-say flow without retyping; preserve scores, quota, saved data and analytics.

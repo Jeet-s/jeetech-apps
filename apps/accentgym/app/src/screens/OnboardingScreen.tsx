@@ -103,9 +103,9 @@ export function OnboardingScreen({ onDone, onPro, assessmentOnly = false }: { as
         }
       >
         <View style={{ gap: space.md }}>
-          <HeroCard overline="WELCOME TO ACCENT GYM" value="One line to start" caption="Listen, speak, get sound guidance."
+          <HeroCard overline="WELCOME TO ACCENT GYM" value="One line to start" caption="Listen, then say a short line."
             style={{ padding: space.md }}>
-            <Text style={[type.caption, { color: gradient.onHeroSoft }]}>5 free AI checks a day. Listen & say also works offline. Scores are transcript-based estimates.</Text>
+            <Text style={[type.caption, { color: gradient.onHeroSoft }]}>Practise offline without a mic, or record for AI guidance. Scores are transcript-based estimates.</Text>
           </HeroCard>
           <Text style={type.heading}>Your first language</Text>
           <Text style={type.caption}>Choose for a tailored starter sound plan.</Text>
@@ -123,7 +123,7 @@ export function OnboardingScreen({ onDone, onPro, assessmentOnly = false }: { as
               { value: "uk", label: "British" },
             ]}
           />
-          <Text style={type.caption}>Next: practise one short line. The full sound check is optional.</Text>
+          <Text style={type.caption}>You can change these in Settings. The full sound check is optional.</Text>
         </View>
       </FooterScreen>
     );

@@ -114,6 +114,15 @@ async function run() {
   assert(assessmentOpened);
   await act(() => button(tree, 'Tap to speak').props.onPress());
   assert.equal(tree.root.findByType('SpeakSheet').props.mode.kind, 'practice');
+  assert.equal(tree.root.findByType('SpeakSheet').props.startWithoutMic, false);
+  await act(() => tree.root.findByType('SpeakSheet').props.onClose());
+  await act(() => button(tree, 'Listen & say without a mic').props.onPress());
+  const guided = tree.root.findByType('SpeakSheet');
+  assert.equal(guided.props.startWithoutMic, true);
+  assert.equal(guided.props.mode.text, hero.findByType('FocusSentence').props.text);
+  await act(() => guided.props.onClose());
+  await act(() => button(tree, 'Start session').props.onPress());
+  assert.equal(tree.root.findByType('SpeakSheet').props.startWithoutMic, false);
   assert.equal(gymStore.get().diagnostics.length, 0);
   await act(() => gymStore.set(s => core.completeGuidedPractice(s, 'We have very warm weather.', dateKey(new Date()))));
   assert.equal(tree.root.findByType('HeroCard').props.status.label, 'Practice saved today');

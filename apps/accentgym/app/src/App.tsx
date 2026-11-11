@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Linking, Platform, Settings, StyleSheet, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
@@ -112,25 +112,31 @@ function Main() {
   const [tab, setTab] = useState<Tab>("practice");
   const [pro, setPro] = useState<string | null>(null);
   const [assessment, setAssessment] = useState(false);
+  const servicesStarted = useRef(false);
 
   useEffect(() => {
     store.set({ sessions: store.get().sessions + 1 });
     analytics.track("app_open");
     void notify.comeback({ days: 2, title: "Your next sound is waiting", body: "One short line and a listening drill — keep your Accent Gym streak moving." });
     reconcileEntitlement();
-    // Billing must not wait for ad consent or an ad-network connection.
-    const billing = initializePurchases().then(reconcileEntitlement);
-    (async () => {
-      await initAudio();
-      await ads.init();
-      setShowBanner(ads.canShowBanner());
-      await billing;
-    })();
+    void initAudio().catch(() => {});
     return store.subscribe(() => {
       setShowBanner(ads.canShowBanner());
       reconcileEntitlement();
     });
   }, []);
+  useEffect(() => {
+    // Main also mounts during setup. Native billing/ad consent must wait until
+    // setup is finished and Practice has painted, so the first step stays usable.
+    if (!settings.onboarded || servicesStarted.current) return;
+    const timer = setTimeout(() => {
+      servicesStarted.current = true;
+      // Billing stays independent of ad consent and network availability.
+      void initializePurchases().then(reconcileEntitlement).catch(() => {});
+      void ads.init().then(() => setShowBanner(ads.canShowBanner())).catch(() => {});
+    }, 600);
+    return () => clearTimeout(timer);
+  }, [settings.onboarded]);
   useEffect(() => {
     if (!showBanner) layout.setBannerHeight(0);
   }, [showBanner]);
